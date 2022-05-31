@@ -1,0 +1,33 @@
+{
+  "name": "R_20",
+  "author": "Rubini",
+  "title": "The Unequal Impact of COVID-19 Across Countriesg",
+  "year": 2020,
+  "publication": "Working Paper",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "i_ini",
+  "initial_value": 0.001,
+  "Code_type": "Matlab",
+  "Dynare_version": "0",
+  "Model_type":2, 
+  "Features":{
+		"fiscal_policy": 1, 
+		"monetary_policy": 0, 
+		"financial": 0, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 0, 
+		"optimal_policy": 1 
+  }, 
+
+  "variables": [ 
+			"Consumption",
+			"Labour",
+			"Output",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+}

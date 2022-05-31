@@ -1,0 +1,32 @@
+{
+  "name": "KUX_20",
+  "author": "Krüger, Uhlig and Xi",
+  "title": "Macroeconomic Dynamics and Reallocation in an Epidemic: Evaluating the 'Swedish Solution'",
+  "year": 2020,
+  "publication": "Economic Policy, forthcoming",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "i_ini",
+  "initial_value": 0.0001,
+  "Code_type": "Dynare",
+  "Dynare_version": "4.6.1",
+  "Model_type": 2,
+  "Features":{
+		  "fiscal_policy": 0, 
+		  "monetary_policy": 0, 
+		  "financial": 0, 
+		  "firm_exit": 0, 
+		  "multi_country": 0, 
+		  "heterogeneity": "F", 
+		  "optimal_policy": 0 
+				}, 
+  "variables": [
+			"Consumption",
+			"Labour",
+			"Output",
+			"Deaths",
+			"Susceptibles",
+			"Infected",
+			"Recovered"
+			] 
+}

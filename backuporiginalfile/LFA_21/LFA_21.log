@@ -1,0 +1,137 @@
+Starting preprocessing of the model file ...
+WARNING: LFA_21.mod:241.1-25: The 'simul' statement is deprecated. Please use 'perfect_foresight_setup' and 'perfect_foresight_solver' instead.
+Found 36 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : Number of newly-infected
+Equation number 2 : 0 : Law of motion of susceptibles
+Equation number 3 : 0.0014 : Law of motion of infected
+Equation number 4 : -0.0013888 : Law of motion of recovered
+Equation number 5 : -1.12e-05 : Law of motion of deaths
+Equation number 6 : 0 : Probability of getting infected
+Equation number 7 : 0 : R0
+Equation number 8 : -0.23333 : pi_s1
+Equation number 9 : -0.23333 : pi_s2
+Equation number 10 : -0.46667 : pi_s3
+Equation number 11 : -5 : Price Phillips curve
+Equation number 12 : 0 : Resource constraint
+Equation number 13 : 0 : Production function
+Equation number 14 : 1 : Shadow rate
+Equation number 15 : 0 : Monetary policy
+Equation number 16 : 0 : Time index
+Equation number 17 : -Inf : Marginal utility of consumption - susceptibles
+Equation number 18 : -Inf : Marginal utility of consumption - infected
+Equation number 19 : -Inf : Marginal utility of consumption - recovered
+Equation number 20 : 0 : Labor supply - susceptibles
+Equation number 21 : 0 : Labor supply - infected
+Equation number 22 : 0 : Labor supply - recovered
+Equation number 23 : NaN : Euler equation
+Equation number 24 : Inf : Lifetime utility of a susceptible
+Equation number 25 : Inf : Lifetime utility of an infected
+Equation number 26 : Inf : Lifetime utility of a recovered
+Equation number 27 : Inf : Aggregate intertemporal utility
+Equation number 28 : 0 : Consumption
+Equation number 29 : 0 : Labour
+Equation number 30 : 0 : Output
+Equation number 31 : 0 : Inflation
+Equation number 32 : 0 : Interest
+Equation number 33 : -0.995 : Susceptibles
+Equation number 34 : -0.003 : Infected
+Equation number 35 : -0.002 : Recovered
+Equation number 36 : 0 : Deaths
+
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : Number of newly-infected
+Equation number 2 : 0 : Law of motion of susceptibles
+Equation number 3 : 0 : Law of motion of infected
+Equation number 4 : 0 : Law of motion of recovered
+Equation number 5 : 0 : Law of motion of deaths
+Equation number 6 : 0 : Probability of getting infected
+Equation number 7 : 0 : R0
+Equation number 8 : 0 : pi_s1
+Equation number 9 : 0 : pi_s2
+Equation number 10 : 0 : pi_s3
+Equation number 11 : 0 : Price Phillips curve
+Equation number 12 : 0 : Resource constraint
+Equation number 13 : 0 : Production function
+Equation number 14 : 0 : Shadow rate
+Equation number 15 : 0 : Monetary policy
+Equation number 16 : 0 : Time index
+Equation number 17 : 0 : Marginal utility of consumption - susceptibles
+Equation number 18 : 0 : Marginal utility of consumption - infected
+Equation number 19 : 0 : Marginal utility of consumption - recovered
+Equation number 20 : 0 : Labor supply - susceptibles
+Equation number 21 : 0 : Labor supply - infected
+Equation number 22 : 0 : Labor supply - recovered
+Equation number 23 : 0 : Euler equation
+Equation number 24 : 0 : Lifetime utility of a susceptible
+Equation number 25 : 0 : Lifetime utility of an infected
+Equation number 26 : 0 : Lifetime utility of a recovered
+Equation number 27 : 0 : Aggregate intertemporal utility
+Equation number 28 : 0 : Consumption
+Equation number 29 : 0 : Labour
+Equation number 30 : 0 : Output
+Equation number 31 : 0 : Inflation
+Equation number 32 : 0 : Interest
+Equation number 33 : 0 : Susceptibles
+Equation number 34 : 0 : Infected
+Equation number 35 : 0 : Recovered
+Equation number 36 : 0 : Deaths
+
+
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+          0.5333           0.5333                0
+               1                1                0
+               1                1                0
+               1                1                0
+               1                1                0
+               1                1                0
+               1                1                0
+               1                1                0
+           1.003            1.003          0.01187
+           1.003            1.003         -0.01187
+           1.876            1.876                0
+       1.261e+16        1.261e+16                0
+
+
+There are 7 eigenvalue(s) larger than 1 in modulus 
+for 7 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+Simulation of the perfect foresight model failed!Switching to a homotopy method...
+Iter. 	 | Lambda 	 | status 	 | Max. residual
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 0.50000 	 | succeeded 	 | 7.402463e-09
+2 	 | 1.00000 	 | failed 	 | 2.389423e+00
+3 	 | 0.75000 	 | succeeded 	 | 7.417622e-12
+4 	 | 1.00000 	 | failed 	 | 1.153587e+00
+5 	 | 0.87500 	 | succeeded 	 | 4.892913e-10
+6 	 | 1.00000 	 | succeeded 	 | 1.865011e-04
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Perfect foresight solution found.
+
+Total computing time : 0h03m59s
+Note: 1 warning(s) encountered in the preprocessor
+Note: warning(s) encountered in MATLAB/Octave code

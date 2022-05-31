@@ -1,0 +1,19 @@
+"Figure 6: People aged 85 years and over had statistically significantly higher rates than all other age groups for deaths due to influenza and pneumonia and COVID-19 in Wales",""
+"Age-standardised and age-specific mortality rates for deaths due to influenza and pneumonia and COVID-19, Wales, occurring between 1 January and 31 August 2020 and registered by 5 September 2020",""
+"",""
+"Notes","1.	Figures exclude deaths of non-residents.
+2.	Figures are based on boundaries as of May 2020.
+3.	Based on date a death occurred, registered up to 5 September 2020.
+4.	Figures for 2020 are based on provisional mortality data and projected populations.
+5.	The International Classification of Diseases, tenth edition (ICD-10) definitions are as follows: coronavirus (COVID-19) (U07.1 and U07.2), influenza and pneumonia (J09-J18).
+6.	Age-standardised mortality rates (ASMRs) per 100,000 population, standardised to the 2013 European Standard Population for all ages and under 65 years. For more information, see [Section 8: Measuring the data](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsduetocoronaviruscovid19comparedwithdeathsfrominfluenzaandpneumoniaenglandandwales/deathsoccurringbetween1januaryand31august2020#measuring-the-data)."
+"Unit","Rate per 100,000 population"
+"",""
+"Age group"," Influenza and Pneumonia 2020","Influenza and Pneumonia 5-year average","COVID-19"
+"All ages","45.8","70.9","102.3"
+"Under 65","3.7","6.3","12.8"
+"65-69","30.7","48.4","108.8"
+"70-74","51.2","81.1","191.6"
+"75-79","104.5","169.3","359.4"
+"80-84","294","429.2","687"
+"85+","1031.4","1601.8","1744.3"

@@ -1,0 +1,56 @@
+*******************
+* FROM DATA PAPER *
+*******************
+(o) Relative home discounts: wfh outcome.
+(o) Relative low and high-skill infection rates: exposure indexes 
+(o) Fraction locked down: use previous paper 
+
+******************
+* NEED MORE DATA *
+******************
+CHECK DATA ON:
+(o) young and old flu rates: maybe just keep them equal? (3% in uk)
+(o) young and old symptomatic estimates (nature medicine paper)
+
+(o) Death rate of old and young: sk cfr; england cfr
+(o) Relative infection rate of old: more or less same in both sk and england
+
+*------------------------------------------------------------
+Relative recovery rate of old: paper from israel is the same?
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7229949/
+
+smaller sample from cdc says approximately twice less likely for old
+https://www.cdc.gov/mmwr/volumes/69/wr/mm6930e1.htm
+*------------------------------------------------------------
+
+Total interaction by skill: FIND DATA ON HIGH-LOW SKILL INTERACTIONS
+september: income quint
+*------------------------------------------------------------
+https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/datasets/coronaviruscovid19infectionsinthecommunityinengland
+*------------------------------------------------------------
+july: occupations
+scotland pdf: poor are twice likely to die.
+*------------------------------------------------------------
+
+********************
+* MATCH WITH MODEL *
+********************
+Home preference loc and param in fwditer0.m
+
+Toggle average infection to match initial rise.
+Toggle infection slope: death rate by occupation
+
+Fear factor: half of UK GDP drop
+Lockdown: peak of UK and 1st wave
+Lockdown duration: GDP path of UK (not employment; was under furlough)
+
+Testing rates: 
+SK:
+before SCJ, set taua=taus, Q to UK final level, and find tau
+after SCJ, set Q=1, and find tau
+
+UK
+first detection: set taus to data
+before lockdown: set Q=0, find taus
+after lockdown: set Q to something, find taus
+after May? (check): set taus=taua

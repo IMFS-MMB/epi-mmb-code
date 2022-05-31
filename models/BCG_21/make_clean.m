@@ -1,0 +1,14 @@
+!rm *.log
+!rm *.eps
+!rm *_dynamic.m
+!rm *_static.m
+!rm one_sector_vcu_results.mat
+!rm two_sector_vcu_results.mat
+!rm one_sector_vcu_binding_results.mat
+!rm two_sector_vcu_binding_results.mat
+!rm two_sector_vcu.m
+!rm two_sector_binding_vcu.m
+!rm two_sector_vcu_binding.m
+!rm one_sector_vcu_binding.m
+!rm one_sector_vcu.m
+!rm *set_auxiliary_variables.m

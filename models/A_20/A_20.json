@@ -1,0 +1,30 @@
+{
+  "name": "A_20",
+  "author": "Atkenson",
+  "title": "What will be the economic impact of COVID-19 in the US? Rough estimates of disease scenarios",
+  "year": 2020,
+  "publication": "National Bureau of Economic Research(No. w26867).",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "y0(3)",
+  "initial_value": 0.0000001,
+  "Code_type": "Matlab",
+  "Dynare_version": "0",
+  "Model_type": 1,
+  "Features":{
+		"fiscal_policy": 0, 
+		"monetary_policy": 0, 
+		"financial": 0, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 0, 
+		"optimal_policy": 0 
+   }, 
+
+  "variables": [ 
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+}

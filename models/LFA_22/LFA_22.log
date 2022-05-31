@@ -1,0 +1,116 @@
+Starting Dynare (version 5.1).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 33 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : Number of newly-infected
+Equation number 2 : 0 : Law of motion of susceptibles
+Equation number 3 : 0 : Law of motion of infected
+Equation number 4 : 0 : Law of motion of recovered
+Equation number 5 : 0 : Law of motion of deaths
+Equation number 6 : 0 : Probability of getting infected
+Equation number 7 : -0.725 : R0
+Equation number 8 : -6 : Price Phillips curve
+Equation number 9 : 0 : Resource constraint
+Equation number 10 : 0 : Production function
+Equation number 11 : 0 : Aggregate consumption
+Equation number 12 : 1 : Shadow rate
+Equation number 13 : 0 : Monetary policy
+Equation number 14 : -Inf : Marginal utility of consumption - susceptibles
+Equation number 15 : -Inf : Marginal utility of consumption - infected
+Equation number 16 : -Inf : Marginal utility of consumption - recovered
+Equation number 17 : 0 : Labor supply - susceptibles
+Equation number 18 : 0 : Labor supply - infected
+Equation number 19 : 0 : Labor supply - recovered
+Equation number 20 : NaN : Euler equation
+Equation number 21 : Inf : Lifetime utility of a susceptible
+Equation number 22 : Inf : Lifetime utility of an infected
+Equation number 23 : Inf : Lifetime utility of a recovered
+Equation number 24 : 0 : Containment rate process
+Equation number 25 : 0 : Consumption
+Equation number 26 : 0 : Labour
+Equation number 27 : 0 : Output
+Equation number 28 : 0 : Inflation
+Equation number 29 : 0 : Interest
+Equation number 30 : -1 : Susceptibles
+Equation number 31 : 0 : Infected
+Equation number 32 : 0 : Recovered
+Equation number 33 : 0 : Deaths
+
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : Number of newly-infected
+Equation number 2 : 0 : Law of motion of susceptibles
+Equation number 3 : 0 : Law of motion of infected
+Equation number 4 : 0 : Law of motion of recovered
+Equation number 5 : 0 : Law of motion of deaths
+Equation number 6 : 0 : Probability of getting infected
+Equation number 7 : 0 : R0
+Equation number 8 : 0 : Price Phillips curve
+Equation number 9 : 0 : Resource constraint
+Equation number 10 : 0 : Production function
+Equation number 11 : 0 : Aggregate consumption
+Equation number 12 : 0 : Shadow rate
+Equation number 13 : 0 : Monetary policy
+Equation number 14 : 0 : Marginal utility of consumption - susceptibles
+Equation number 15 : 0 : Marginal utility of consumption - infected
+Equation number 16 : 0 : Marginal utility of consumption - recovered
+Equation number 17 : 0 : Labor supply - susceptibles
+Equation number 18 : 0 : Labor supply - infected
+Equation number 19 : 0 : Labor supply - recovered
+Equation number 20 : 0 : Euler equation
+Equation number 21 : 0 : Lifetime utility of a susceptible
+Equation number 22 : 0 : Lifetime utility of an infected
+Equation number 23 : 0 : Lifetime utility of a recovered
+Equation number 24 : 0 : Containment rate process
+Equation number 25 : 0 : Consumption
+Equation number 26 : 0 : Labour
+Equation number 27 : 0 : Output
+Equation number 28 : 0 : Inflation
+Equation number 29 : 0 : Interest
+Equation number 30 : 0 : Susceptibles
+Equation number 31 : 0 : Infected
+Equation number 32 : 0 : Recovered
+Equation number 33 : 0 : Deaths
+
+
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+          0.9304           0.9304                0
+               1                1                0
+               1                1                0
+               1                1                0
+               1                1                0
+           1.003            1.003          0.01187
+           1.003            1.003         -0.01187
+            1.02             1.02                0
+           1.876            1.876                0
+       2.981e+16        2.981e+16                0
+
+
+There are 6 eigenvalue(s) larger than 1 in modulus 
+for 6 forward-looking variable(s)
+
+The rank condition is verified.
+
+Total computing time : 0h00m57s
+Note: warning(s) encountered in MATLAB/Octave code
