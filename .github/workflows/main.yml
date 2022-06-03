@@ -51,10 +51,10 @@ jobs:
         with:
           command: ci
       - name: Upload artifacts
-        - uses: actions/upload-artifact@v3
-          with:
-            name: results
-            path: results/*.json
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: results/*.json
 
   upload:
       name: Upload
