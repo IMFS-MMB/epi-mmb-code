@@ -109,7 +109,7 @@ RplusD_target=0.6;                   %total share of people infected and then ei
 
 %Load Numerical part: 11 variables
 
-load ss_for_dynare y;
+load SS_for_dynare y;
 
 Cbar=y(1);
 
