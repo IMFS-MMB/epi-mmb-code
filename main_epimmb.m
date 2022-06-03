@@ -6,8 +6,8 @@ try
     cd(p.path.root)
 end
 p.path.root = convertCharsToStrings(pwd);
-p.path.working = p.path.root + "\working";
-p.path.share.dyModules =  p.path.root + "\shared\dyModules" ;
+p.path.working = fullfile(p.path.root, 'working') ;
+p.path.share.dyModules =  fullfile(p.path.root, "shared", "dyModules");
 num_vars=7;
 num_vars_with_ss=3;
 try
@@ -23,9 +23,9 @@ num_macrovar = length(macrovariablelist);
 for ind_model = 1: num_model
     modelname = modellist(ind_model);
     disp(modelname);
-    p.path.models = p.path.root + "\models";
-    t.path.model = p.path.models + "\" + modelname;
-    t.path.modeldymodules = t.path.model + "\dyModules" ;
+    p.path.models = fullfile(p.path.root, 'models');
+    t.path.model = fullfile(p.path.models, modelname);
+    t.path.modeldymodules = fullfile(t.path.model, "dyModules");
     cd(t.path.model);
         
     if re_simulate == 0

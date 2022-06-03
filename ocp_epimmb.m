@@ -6,8 +6,8 @@ try
     cd(ppp.path.root)
 end
 ppp.path.root = convertCharsToStrings(pwd);
-ppp.path.working = ppp.path.root + "\working";
-ppp.path.share.dyModules =  ppp.path.root + "\shared\dyModules" ;
+ppp.path.working = fullfile(ppp.path.root, "working");
+ppp.path.share.dyModules =  fullfile(ppp.path.root, "shared", "dyModules") ;
 num_vars=7;
 try
     rmdir(ppp.path.working,'s')
@@ -19,9 +19,9 @@ num_macrovar = length(macrovariablelist);
 result_mat = NaN(num_macrovar,maxhorizon);
 
 disp(modelname);
-ppp.path.models = ppp.path.root + "\models";
-ttt.path.model = ppp.path.models + "\" + modelname;
-ttt.path.modeldymodules = ttt.path.model + "\dyModules" ;
+ppp.path.models = fullfile(ppp.path.root, "models");
+ttt.path.model = fullfile(ppp.path.models, modelname);
+ttt.path.modeldymodules = fullfile(ttt.path.model, "dyModules") ;
 cd(ttt.path.model);
 
 
