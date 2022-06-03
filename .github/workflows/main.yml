@@ -15,27 +15,27 @@ jobs:
       matrix:
         MODEL_NAME:
           - A_20
-          # - AAL_20
+          - AAL_20
           - ACS_21
           - AJRT_20
-          # - ALS_20
-          # - BCG_21
-          # - BKST_21
-          # - CDL_21
-          # - CF_20
-          # - ERT_21
-          # - ERT_21_Ineq
-          # - ERT_21_NK
-          # - ERT_21_Test
-          # - GP_20
-          # - HKK_20
-          # - JPV_21
-          # - KUX_20
-          # - LFA_22
-          # - MY_21
-          # - R_20
-          # - V_20
-          # - VDS_21
+          - ALS_20
+          - BCG_21
+          - BKST_21
+          - CDL_21
+          - CF_20
+          - ERT_21
+          - ERT_21_Ineq
+          - ERT_21_NK
+          - ERT_21_Test
+          - GP_20
+          - HKK_20
+          - JPV_21
+          - KUX_20
+          - LFA_22
+          - MY_21
+          - R_20
+          - V_20
+          - VDS_21
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
