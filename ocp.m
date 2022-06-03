@@ -6,18 +6,26 @@ addpath(dy_path);
 savepath=pwd;
 addpath(pwd);
 addpath(strcat(pwd,'\frequency'));
-cd models
-modelspath=pwd;
-all = dir;
-all = all(3:end);
+
 Time=100;
-list_models = {};
-for i =1:size(all,1)
-    if all(i).isdir 
-        list_models{end+1}=all(i).name;
+
+if(size(getenv('MODEL_NAME'), 1))
+    list_models = { getenv('MODEL_NAME') };
+else
+    cd models
+    modelspath=pwd;
+    all = dir;
+    all = all(3:end);
+
+    list_models = {};
+    for i =1:size(all,1)
+        if all(i).isdir
+            list_models{end+1}=all(i).name;
+        end
     end
+    cd ..
 end
-cd ..
+
 %list_models=list_models(6);
 % main_epimmb(  [modellist (string)], ...
 %               [macrovariablelist (string)],...
