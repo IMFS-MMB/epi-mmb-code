@@ -47,6 +47,11 @@ for index_m=1:size(list_models,2)
         json_filename=str_modelname+"-"+str_shockname+".output.json";        
         %cd(list_models{index_m})
         results_mat=ocp_epimmb(list_models(index_m),["Consumption","Labour","Output","Susceptibles","Infected","Recovered","Deaths"],[shocks(index_s,1) shocks(index_s,2)],dy_root);
+
+        if(~exist('results', 'file'))
+          mkdir results;
+        end
+
         cd results
         jso.model=modelname;
         jso.shock=shockname;
