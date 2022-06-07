@@ -15,41 +15,55 @@ jobs:
       matrix:
         MODEL_NAME:
           - A_20
-          - AAL_20
-          - ACS_21
-          - AJRT_20
-          - ALS_20
-          - BCG_21
-          - BKST_21
-          - CDL_21
-          - CF_20
-          - ERT_21
-          - ERT_21_Ineq
-          - ERT_21_NK
-          - ERT_21_Test
-          - GP_20
-          - HKK_20
-          - JPV_21
-          - KUX_20
-          - LFA_22
-          - MY_21
-          - R_20
-          - V_20
-          - VDS_21
+          #- AAL_20
+          #- ACS_21
+          #- AJRT_20
+          #- ALS_20
+          #- BCG_21
+          #- BKST_21
+          #- CDL_21
+          #- CF_20
+          #- ERT_21
+          #- ERT_21_Ineq
+          #- ERT_21_NK
+          #- ERT_21_Test
+          #- GP_20
+          #- HKK_20
+          #- JPV_21
+         # - KUX_20
+         # - LFA_22
+         # - MY_21
+         # - R_20
+          #- V_20
+          #- VDS_21
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: Set up MATLAB
+        
+      - uses: actions/cache@v3
+        id: cache
+        with:
+          path: |
+            results
+          key: ${{ runner.os }}-${{ hashFiles('models/${{ matrix.MODEL_NAME }}/**/*') }}
+        
+      - if: ${{ steps.cache.outputs.cache-hit == 'false' }}
+        name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v1
-      - name: Set up Dynare
+        
+      - if: ${{ steps.cache.outputs.cache-hit == 'false' }}
+        name: Set up Dynare
         run: "DEBIAN_FRONTEND=noninteractive sudo apt-get install --no-upgrade --no-install-recommends -y dynare dynare-matlab x13as"
-      - name: Run script
+        
+      - if: ${{ steps.cache.outputs.cache-hit == 'false' }}
+        name: Run script
         uses: matlab-actions/run-command@v1
         env:
           MODEL_NAME: ${{ matrix.MODEL_NAME }}
           LD_PRELOAD: "/usr/lib/x86_64-linux-gnu/libstdc++.so.6"
         with:
           command: ci
+          
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
