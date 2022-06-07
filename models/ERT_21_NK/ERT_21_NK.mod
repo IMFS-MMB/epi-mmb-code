@@ -131,7 +131,7 @@ Output_ss = y_ss;
 Susceptibles_ss = s_ss; 
 Infected_ss = i_ss;
 Recovered_ss = r_ss;
-//Deaths_ss = d_ss; //not available
+Deaths_ss = 0; 
 
 //Some useful command window output
 cons_share=c_ss/y_ss
