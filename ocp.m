@@ -5,7 +5,7 @@ dy_root="c:/dynare/";
 addpath(dy_path); 
 savepath=pwd;
 addpath(pwd);
-addpath(strcat(pwd,'\frequency'));
+addpath(fullfile(pwd,'frequency'));
 
 Time=100;
 
