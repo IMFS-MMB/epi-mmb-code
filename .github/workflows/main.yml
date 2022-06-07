@@ -26,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        MODEL_NAME: ${{ fromJson(needs.list-manifests.outputs.matrix) }}
+        MODEL_NAME: ${{ fromJson(needs.list-models.outputs.models) }}
         
     steps:
       - name: Check out repository
