@@ -11,6 +11,7 @@ jobs:
   list-models:
     outputs:
       models: ${{ steps.list-models.outputs.models }}
+    name: List Models
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
