@@ -8,6 +8,18 @@ concurrency:
   group: 'Calculate OCP data'
   cancel-in-progress: true
 jobs:
+  list-models:
+    outputs:
+      models: ${{ steps.list-models.outputs.models }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        
+      - id: list-models
+        # thanks, https://code.dblock.org/2021/09/03/generating-task-matrix-by-looping-over-repo-files-with-github-actions.html
+        run: echo "::set-output name=models::$(ls -l models | awk '/^d/ {print $9}' | jq -R -s -c 'split("\n")[:-1]')"
+        
   simulate:
     name: Run Simulation
     runs-on: ubuntu-22.04
@@ -39,7 +51,7 @@ jobs:
           #- VDS_21
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - run:  echo "${{ format('models/{0}/**/*', matrix.MODEL_NAME) }}"; echo "${{ hashFiles(format('models/{0}/**/*', matrix.MODEL_NAME)) }}"
       - uses: actions/cache@v3
         id: cache-results
