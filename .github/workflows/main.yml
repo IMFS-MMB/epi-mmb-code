@@ -21,11 +21,15 @@ jobs:
         run: echo "::set-output name=models::$(ls -l models | awk '/^d/ {print $9}' | jq -R -s -c 'split("\n")[:-1]')"
         
   simulate:
+    needs: 
+      - list-models
+      
     name: Run Simulation
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
+        # linter yells "invalid type", but the parsed json will fit in here just fine
         MODEL_NAME: ${{ fromJson(needs.list-models.outputs.models) }}
         
     steps:
