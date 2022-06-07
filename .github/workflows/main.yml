@@ -46,7 +46,7 @@ jobs:
           path: |
             results
           key: ${{ runner.os }}-${{ hashFiles(format('models/{0}/**/*', matrix.MODEL_NAME)) }}
-        
+      - run: echo "${{steps.cache.outputs.cache-hit}}"  
       - if: ${{ steps.cache.outputs.cache-hit == 'false' }}
         name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v1
