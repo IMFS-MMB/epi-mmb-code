@@ -26,39 +26,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        MODEL_NAME:
-          - A_20
-          #- AAL_20
-          #- ACS_21
-          #- AJRT_20
-          #- ALS_20
-          #- BCG_21
-          #- BKST_21
-          #- CDL_21
-          #- CF_20
-          #- ERT_21
-          #- ERT_21_Ineq
-          #- ERT_21_NK
-          #- ERT_21_Test
-          #- GP_20
-          #- HKK_20
-          #- JPV_21
-         # - KUX_20
-         # - LFA_22
-         # - MY_21
-         # - R_20
-          #- V_20
-          #- VDS_21
+        MODEL_NAME: ${{ fromJson(needs.list-manifests.outputs.matrix) }}
+        
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - run:  echo "${{ format('models/{0}/**/*', matrix.MODEL_NAME) }}"; echo "${{ hashFiles(format('models/{0}/**/*', matrix.MODEL_NAME)) }}"
+    
       - uses: actions/cache@v3
         id: cache-results
         with:
           path: results/*.json
           key: ${{ hashFiles(format('models/{0}/**/*', matrix.MODEL_NAME)) }}
-      - run: echo "${{steps.cache.outputs.cache-hit}}"  
+    
       - if: steps.cache-results.outputs.cache-hit != 'true'
         name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v1
