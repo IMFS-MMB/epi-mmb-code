@@ -66,15 +66,27 @@ jobs:
           name: results
           path: results/*.json
 
-  upload:
-      name: Upload
+  push:
+      name: Update OCP repo
       needs: simulate
       runs-on: ubuntu-22.04
       steps:
+        - name: Check out repository
+          uses: actions/checkout@v3
+          with:
+            repository: 'imfs/epi-mmb-ocp'
+            token: ${{ secrets.CI_TOKEN }}
+        
         - uses: actions/download-artifact@v3
           with:
             name: results
-            path: results
-        - name: List result files
-          run: "ls -l results"
-       
+            path: src/results
+            
+        - name: Commit / Push
+          run: |
+            git config user.name mmb-ci
+            git config user.email mmb-ci@macromodelbase.com
+            git add src/results/*
+            git commit -m "Update results"
+            git push
+        
