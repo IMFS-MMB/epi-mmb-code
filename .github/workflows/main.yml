@@ -74,7 +74,7 @@ jobs:
         - name: Check out repository
           uses: actions/checkout@v3
           with:
-            repository: 'imfs/epi-mmb-ocp'
+            repository: 'imfs-mmb/epi-mmb-ocp'
             token: ${{ secrets.CI_TOKEN }}
         
         - uses: actions/download-artifact@v3
