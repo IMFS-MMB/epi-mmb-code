@@ -94,30 +94,38 @@ if jcode.Code_type=="Dynare"
             series_ss = results.oo_.steady_state(series_pos,:);
 
             if modelname=="LFA_22"
-                  if series_ss == 0 | macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
-                    series = series_level;
+                  if series_ss == 0 
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+                        series = series_level;
+                    else
+                        series = 100* series_level;
+                    end    
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end
                     result_mat(ind_macrovar,1:(maxhorizon-1)) = series(2:maxhorizon);
 
                 else
-                    series = (series_level - series_ss)/series_ss;
+                    series = 100*(series_level - series_ss)/series_ss;
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end                    
                     result_mat(ind_macrovar,1:(maxhorizon-1)) = series(2:maxhorizon);
                 end
             else
-                if series_ss == 0 | macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
-                    series = series_level;
+                if series_ss == 0 
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+                        series = series_level;
+                    else
+                        series = 100* series_level;
+                    end    
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end
                     result_mat(ind_macrovar,:) = series(1:maxhorizon);
 
                 else
-                    series = (series_level - series_ss)/series_ss;
+                    series = 100*(series_level - series_ss)/series_ss;
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end                    
@@ -143,14 +151,18 @@ elseif jcode.Code_type=="Matlab"
             
             if exist('series_ss','var') == 1
                 if series_ss == 0;
-                    series = series_level;
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+                        series = series_level;
+                    else
+                        series = 100* series_level;
+                    end    
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end
                     result_mat(ind_macrovar,:) = series(1:maxhorizon);
 
                 else
-                    series = (series_level - series_ss)/series_ss;
+                    series = 100*(series_level - series_ss)/series_ss;
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end                    
