@@ -393,7 +393,7 @@ Infected=I_endog;
 Recovered=R_endog;
 Deaths=D_endog;
 Labour=theta_total_endog;
-Consumption=C_dev_endog;
+Consumption=C_dev_endog./100;
 Output=Y_endog;
 
 Consumption_ss=0;%C_ss
