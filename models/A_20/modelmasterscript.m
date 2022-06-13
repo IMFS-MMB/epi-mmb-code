@@ -7,9 +7,9 @@ Infected= day2week(y(:,3));
 %Exposed= day2week(y(:,2));
 Recovered= day2week(y(:,4));
 Deaths = day2week(y(:,4));
-Consumption = zeros(size(Susceptibles));
-Labour = zeros(size(Susceptibles));
-Output = zeros(size(Susceptibles));
+Consumption = NaN(size(Susceptibles));
+Labour = NaN(size(Susceptibles));
+Output = NaN(size(Susceptibles));
 
 
 Consumption_ss = 0;
