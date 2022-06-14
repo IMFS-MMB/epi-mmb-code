@@ -1,8 +1,8 @@
 %%% This file computes everything else: (i) baseline experiments, (ii)
 %%% policy-by-policy analysis, (iii) US package multipliers
-clear
-clc
-close all
+% clear
+% clc
+% close all
 
 load params.mat
 load data_shocks.mat

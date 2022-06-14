@@ -1,8 +1,8 @@
 %%% This file calibrates the model and computes shocks that match the path
 %%% of US unemployment
-clear
-clc
-close all
+% clear
+% clc
+% close all
 
 par       = struct; % structure for parameters
 detss     = struct; % structure to save deterministic steady state
@@ -297,76 +297,81 @@ end
 data_shocks = oo_.exo_simul;
 save data_shocks.mat data_shocks
 
-% Plot data vs. model
-Tirf = 9;
-time = (1:Tirf)';
-% dt_start = datetime(2019,12,31);
-dt_start = datetime(2020,03,31);
-dt_end   = dt_start+calmonths(3*Tirf-1);
-dateplot = dt_start:calmonths(3):dt_end;
+%% belows are unused original codes
+if 0
+    % Plot data vs. model
+    Tirf = 9;
+    time = (1:Tirf)';
+    % dt_start = datetime(2019,12,31);
+    dt_start = datetime(2020,03,31);
+    dt_end   = dt_start+calmonths(3*Tirf-1);
+    dateplot = dt_start:calmonths(3):dt_end;
 
-unemp_data = [unemp_data; NaN(Tirf-length(unemp_data),1)];
+    unemp_data = [unemp_data; NaN(Tirf-length(unemp_data),1)];
 
-figure
-subplot(2,1,1)
-plot((1:Tirf), 100*unemp_model(1:Tirf), 'Linewidth', 2), hold on
-plot((1:Tirf), 100*unemp_data, '--', 'Linewidth', 2)
-axis tight
-grid minor
-title('Unemployment Rate, %')
-legend('Model', 'Data', 'Location', 'Northeast')
-% datetick('x','QQ-YY','keeplimits','keepticks')
-xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21', 'Q2-21', 'Q3-21', 'Q4-21', 'Q1-22'})
+    figure
+    subplot(2,1,1)
+    plot((1:Tirf), 100*unemp_model(1:Tirf), 'Linewidth', 2), hold on
+    plot((1:Tirf), 100*unemp_data, '--', 'Linewidth', 2)
+    axis tight
+    grid minor
+    title('Unemployment Rate, %')
+    legend('Model', 'Data', 'Location', 'Northeast')
+    % datetick('x','QQ-YY','keeplimits','keepticks')
+    xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21', 'Q2-21', 'Q3-21', 'Q4-21', 'Q1-22'})
 
-subplot(2,1,2)
-plot((1:Tirf), 100*(exp(oo_.endo_simul(ind_ua_var,1:Tirf)')/detss.util_a-1), 'Linewidth', 2)
-axis tight
-grid minor
-title('Shock, % deviation from SS')
-% datetick('x','QQ-YY','keeplimits','keepticks')
-xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21', 'Q2-21', 'Q3-21', 'Q4-21', 'Q1-22'})
+    subplot(2,1,2)
+    plot((1:Tirf), 100*(exp(oo_.endo_simul(ind_ua_var,1:Tirf)')/detss.util_a-1), 'Linewidth', 2)
+    axis tight
+    grid minor
+    title('Shock, % deviation from SS')
+    % datetick('x','QQ-YY','keeplimits','keepticks')
+    xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21', 'Q2-21', 'Q3-21', 'Q4-21', 'Q1-22'})
 
-%print -depsc figures/shock_model_data
-%print -dpng figures/shock_model_data
+    print -depsc figures/shock_model_data
+    print -dpng figures/shock_model_data
 
-% Plot fiscal policy impulses
-figure
-subplot(2,2,1)
-plot((1:5), 100*[data_G; 0], '-s', 'Linewidth', 2)
-axis tight
-grid minor
-title('G spending, % of GDP')
-% datetick('x','QQ-YY','keeplimits','keepticks')
-xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
+    % Plot fiscal policy impulses
+    figure
+    subplot(2,2,1)
+    plot((1:5), 100*[data_G; 0], '-s', 'Linewidth', 2)
+    axis tight
+    grid minor
+    title('G spending, % of GDP')
+    % datetick('x','QQ-YY','keeplimits','keepticks')
+    xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
 
-subplot(2,2,2)
-plot((1:5), 100*[data_transfer; 0], '-s', 'Linewidth', 2)
-axis tight
-grid minor
-title('Tb spending, % of GDP')
-% datetick('x','QQ-YY','keeplimits','keepticks')
-xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
+    subplot(2,2,2)
+    plot((1:5), 100*[data_transfer; 0], '-s', 'Linewidth', 2)
+    axis tight
+    grid minor
+    title('Tb spending, % of GDP')
+    % datetick('x','QQ-YY','keeplimits','keepticks')
+    xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
 
-subplot(2,2,3)
-plot((1:5), 100*[data_varsigma; 0], '-s', 'Linewidth', 2)
-axis tight
-grid minor
-title('ui spending, % of GDP')
-% datetick('x','QQ-YY','keeplimits','keepticks')
-xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
+    subplot(2,2,3)
+    plot((1:5), 100*[data_varsigma; 0], '-s', 'Linewidth', 2)
+    axis tight
+    grid minor
+    title('ui spending, % of GDP')
+    % datetick('x','QQ-YY','keeplimits','keepticks')
+    xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
 
-subplot(2,2,4)
-plot((1:5), 100*[data_govt_wage; 0], '-s', 'Linewidth', 2)
-axis tight
-grid minor
-title('Ta spending, % of GDP')
-% datetick('x','QQ-YY','keeplimits','keepticks')
-xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
+    subplot(2,2,4)
+    plot((1:5), 100*[data_govt_wage; 0], '-s', 'Linewidth', 2)
+    axis tight
+    grid minor
+    title('Ta spending, % of GDP')
+    % datetick('x','QQ-YY','keeplimits','keepticks')
+    xticklabels({'Q1-20', 'Q2-20', 'Q3-20', 'Q4-20', 'Q1-21'})
 
-print -depsc figures/fiscal_policy_data
-print -dpng figures/fiscal_policy_data
+    print -depsc figures/fiscal_policy_data
+    print -dpng figures/fiscal_policy_data
+end
 
-%% (end) Delete temporary files and other Dynare-generate clutter
-delete *.log *_dynamic.m *_results.mat *_variables.m *_static.m
-rmdir('model', 's')
-rmdir('+model', 's')
+if 0 %will be taken care by the masterscript
+    %% (end) Delete temporary files and other Dynare-generate clutter
+    delete *.log *_dynamic.m *_results.mat *_variables.m *_static.m
+    rmdir('model', 's')
+    rmdir('+model', 's')
+end

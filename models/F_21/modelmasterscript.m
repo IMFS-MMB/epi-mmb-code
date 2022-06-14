@@ -1,9 +1,10 @@
 %% modelmasterscript
 %%  running the baseline simulations 
-cd main
+%cd main
+addpath(horzcat(pwd,'\main'))
 calibrate_model
 multipliers_normal_times
-crisis_experiments
+%crisis_experiments
 
 %% Save the variables
 
