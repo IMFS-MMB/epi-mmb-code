@@ -42,7 +42,7 @@ jobs:
         with:
           path: results/*.json
           # depends on all files inside the /models/[model] folder as well as all .m files outside the /models folder
-          key: ${{ hashFiles(format('models/{0}/**/*', matrix.MODEL_NAME)) }}-${{ hashFiles('!models/**/*', '**/*.m') }}
+          key: ${{ hashFiles(format('models/{0}/**/*', matrix.MODEL_NAME)) }}-${{ hashFiles('**/*.m', '!models/**/*') }}
     
       - if: steps.cache-results.outputs.cache-hit != 'true'
         name: Set up MATLAB
