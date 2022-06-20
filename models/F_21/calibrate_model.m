@@ -234,6 +234,10 @@ dynare model.mod noclearall;
 % 
 % return
 
+load simulated_results_dy
+M_ = resultsdy.M_;
+oo_ = resultsdy.oo_;
+
 % Indices for variables of interest
 ind_unemp  = strmatch('unemp', M_.endo_names, 'exact');
 ind_ua_var = strmatch('util_a', M_.endo_names, 'exact');

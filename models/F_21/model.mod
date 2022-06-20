@@ -309,3 +309,8 @@ steady;
 %simul(periods=100,maxit=100,stack_solve_algo=1);
 perfect_foresight_setup(periods=100);
 perfect_foresight_solver(stack_solve_algo=7, solve_algo=9, maxit=100);
+
+
+resultsdy.oo_ = oo_ ;
+resultsdy.M_ = M_;
+save simulated_results_dy resultsdy;
