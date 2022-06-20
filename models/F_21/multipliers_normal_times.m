@@ -9,6 +9,10 @@ load params.mat
 % Run Dynare once
 dynare model.mod noclearall;
 
+load simulated_results_dy
+M_ = resultsdy.M_;
+oo_ = resultsdy.oo_;
+
 % Indices for variables of interest
 ind_unemp  = strmatch('unemp', M_.endo_names, 'exact');
 ind_ua_var = strmatch('util_a', M_.endo_names, 'exact');
@@ -78,26 +82,27 @@ irf_store.nopol = oo_.endo_simul(:,1:end);
 % mult.cs  = struct;
 % mult.y  = struct;
 % mult.income = struct;
-% 
-% ind_gdp   = strmatch('GDP', M_.endo_names, 'exact');
-% ind_y     = strmatch('Y', M_.endo_names, 'exact');
-% ind_cb    = strmatch('Cb', M_.endo_names, 'exact');
-% ind_cs    = strmatch('Cs', M_.endo_names, 'exact');
-% ind_R     = strmatch('R', M_.endo_names, 'exact');
-% ind_spend_G = strmatch('spend_G', M_.endo_names, 'exact');
-% ind_spend_tau_l = strmatch('spend_tau_l', M_.endo_names, 'exact');
-% ind_spend_varsigma = strmatch('spend_varsigma', M_.endo_names, 'exact');
-% ind_spend_transfer = strmatch('spend_transfer', M_.endo_names, 'exact');
-% ind_spend_govt_wage = strmatch('spend_govt_wage', M_.endo_names, 'exact');
-% ind_spend = [ind_spend_G; ind_spend_tau_l; ind_spend_varsigma; ind_spend_transfer; ind_spend_govt_wage];
-% ind_income    = strmatch('income', M_.endo_names, 'exact');
-% ind_na = strmatch('N_a', M_.endo_names, 'exact');
-% ind_nn = strmatch('N_n', M_.endo_names, 'exact');
 
-horz = 20;
+ind_gdp   = strmatch('GDP', M_.endo_names, 'exact');
+ind_y     = strmatch('Y', M_.endo_names, 'exact');
+ind_cb    = strmatch('Cb', M_.endo_names, 'exact');
+ind_cs    = strmatch('Cs', M_.endo_names, 'exact');
+ind_R     = strmatch('R', M_.endo_names, 'exact');
+ind_spend_G = strmatch('spend_G', M_.endo_names, 'exact');
+ind_spend_tau_l = strmatch('spend_tau_l', M_.endo_names, 'exact');
+ind_spend_varsigma = strmatch('spend_varsigma', M_.endo_names, 'exact');
+ind_spend_transfer = strmatch('spend_transfer', M_.endo_names, 'exact');
+ind_spend_govt_wage = strmatch('spend_govt_wage', M_.endo_names, 'exact');
+ind_spend = [ind_spend_G; ind_spend_tau_l; ind_spend_varsigma; ind_spend_transfer; ind_spend_govt_wage];
+ind_income    = strmatch('income', M_.endo_names, 'exact');
+ind_na = strmatch('N_a', M_.endo_names, 'exact');
+ind_nn = strmatch('N_n', M_.endo_names, 'exact');
 
-for jj = 1:length(pols)
-    currpol = pols{jj};
+% horz = 20;
+horz = 40; % changed by epi-mmb, Kailong: horizon
+
+% for jj = 1:length(pols)   % adjusted by epi-mmb, kailong: no policy, baseline only
+%     currpol = pols{jj};
 
     GDP_nopol = exp(irf_store.nopol(ind_gdp, 1:horz))';
 %     GDP_pol = exp(irf_store.(currpol)(ind_gdp, 1:horz))';
@@ -111,7 +116,7 @@ for jj = 1:length(pols)
     y_nopol = exp(irf_store.nopol(ind_y, 1:horz))';
 %     y_pol = exp(irf_store.(currpol)(ind_y, 1:horz))';
 
-    spend_nopol = irf_store.nopol(ind_spend(jj), 1:horz)';
+%     spend_nopol = irf_store.nopol(ind_spend(jj), 1:horz)';
 %     spend_pol = irf_store.(currpol)(ind_spend(jj), 1:horz)';
 
     income_nopol = irf_store.nopol(ind_income, 1:horz)';
@@ -129,7 +134,7 @@ for jj = 1:length(pols)
 %     mult.y.(currpol) = sum(cumR.*(y_pol-y_nopol))./sum(cumR.*(spend_pol-spend_nopol));
 %     mult.income.(currpol) = sum(cumR.*(income_pol-income_nopol))./sum(cumR.*(spend_pol-spend_nopol));
 %     mult.employ.(currpol) = sum(cumR.*(employ_pol-employ_nopol))./sum(cumR.*(spend_pol-spend_nopol));
-end
+% end
 
 % Table with multipliers
 %fileID = fopen('tables/multipliers_normal.txt','w');
