@@ -8,12 +8,12 @@ multipliers_normal_times
 
 %% Save the variables
 
-Consumption_quarterly= (par.chi)*exp(irf_store.nopol(strmatch('Cb', M_.endo_names, 'exact'),1:end))+(1-par.chi)*exp(irf_store.nopol(strmatch('Cs', M_.endo_names, 'exact'),1:end));
-Consumption= repelem((par.chi)*exp(irf_store.nopol(strmatch('Cb', M_.endo_names, 'exact'),1:end))+(1-par.chi)*exp(irf_store.nopol(strmatch('Cs', M_.endo_names, 'exact'),1:end)),12)'; %convert to weekly from quarterly
-Labour_quarterly = exp(irf_store.nopol(strmatch('N_a', M_.endo_names, 'exact'),1:end)) + exp(irf_store.nopol(strmatch('N_n', M_.endo_names, 'exact'),1:end)); 
-Labour = repelem(exp(irf_store.nopol(strmatch('N_a', M_.endo_names, 'exact'),1:end)) + exp(irf_store.nopol(strmatch('N_n', M_.endo_names, 'exact'),1:end)),12)'; 
-Output_quarterly = exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),1:end)); 
-Output = repelem(exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),1:end)),12)'; 
+Consumption_quarterly= (par.chi)*exp(irf_store.nopol(strmatch('Cb', M_.endo_names, 'exact'),2:end))+(1-par.chi)*exp(irf_store.nopol(strmatch('Cs', M_.endo_names, 'exact'),2:end));
+Consumption= repelem((par.chi)*exp(irf_store.nopol(strmatch('Cb', M_.endo_names, 'exact'),2:end))+(1-par.chi)*exp(irf_store.nopol(strmatch('Cs', M_.endo_names, 'exact'),2:end)),12)'; %convert to weekly from quarterly
+Labour_quarterly = exp(irf_store.nopol(strmatch('N_a', M_.endo_names, 'exact'),2:end)) + exp(irf_store.nopol(strmatch('N_n', M_.endo_names, 'exact'),2:end)); 
+Labour = repelem(exp(irf_store.nopol(strmatch('N_a', M_.endo_names, 'exact'),2:end)) + exp(irf_store.nopol(strmatch('N_n', M_.endo_names, 'exact'),2:end)),12)'; 
+Output_quarterly = exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),2:end)); 
+Output = repelem(exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),2:end)),12)'; 
 
 Susceptibles = nan(size(Consumption));
 Deaths = nan(size(Consumption));
