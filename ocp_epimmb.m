@@ -105,8 +105,12 @@ if jcode.Code_type=="Dynare"
                     end
                     result_mat(ind_macrovar,1:(maxhorizon-1)) = series(2:maxhorizon);
 
-                else
+                  else
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+                        series = 100*series_level;
+                    else
                     series = 100*(series_level - series_ss)/series_ss;
+                    end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end                    
@@ -125,7 +129,11 @@ if jcode.Code_type=="Dynare"
                     result_mat(ind_macrovar,:) = series(1:maxhorizon);
 
                 else
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+                        series = 100*series_level;
+                    else
                     series = 100*(series_level - series_ss)/series_ss;
+                    end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end                    
