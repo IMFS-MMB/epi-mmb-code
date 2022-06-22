@@ -96,9 +96,9 @@ if jcode.Code_type=="Dynare"
             if modelname=="LFA_22"
                   if series_ss == 0 
                     if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
-                        series = series_level;
+                        series = 100*series_level;
                     else
-                        series = 100* series_level;
+                        series = 100*series_level;
                     end    
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
@@ -115,7 +115,7 @@ if jcode.Code_type=="Dynare"
             else
                 if series_ss == 0 
                     if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
-                        series = series_level;
+                        series = 100*series_level;
                     else
                         series = 100* series_level;
                     end    
@@ -152,7 +152,7 @@ elseif jcode.Code_type=="Matlab"
             if exist('series_ss','var') == 1
                 if series_ss == 0;
                     if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
-                        series = series_level;
+                        series = 100*series_level;
                     else
                         series = 100* series_level;
                     end    
