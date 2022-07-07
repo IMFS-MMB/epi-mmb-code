@@ -1,0 +1,27 @@
+
+//----------------------------------------------------
+//        Model building blocks        
+    
+        
+@#include "definitions.dyn"
+        
+@#include "model_definition.dyn"
+
+@#include "initval.dyn"
+
+@#include "gemc_estim_params.dyn"
+@#include "gemc_estim_shocks.dyn"
+
+@#include "steady_state.dyn"
+
+steady; 
+check;
+
+//----------------------------------------------------
+//        Produce IRFS using deterministic simulations (see Figures 2-4)      
+    
+@#define det_periods = 600    
+@#include "det_simul_script_irfs_fs.dyn" //this is only the forced savings shock !
+     
+
+

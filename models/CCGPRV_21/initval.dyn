@@ -1,0 +1,613 @@
+initval;
+
+            GAY_EA                     = 1; //${g^{A^Y}_{EA}}$          (long_name = 'Growth of productivity production fct EA')
+
+            GAPC_EA                    = 1; //${g^{{Ap}^{C}}_{EA}}$     (long_name = 'Growth of private consumption specific productivity shock EA')
+
+            GAPG_EA                    = 1; //${g^{{Ap}^{G}}_{EA}}$     (long_name = 'Growth of gov consumption specific productivity shock EA')
+
+            GAPI_EA                    = 1; //${g^{{Ap}^{I}}_{EA}}$     (long_name = 'Growth of private investment specific productivity shock EA')
+
+            //GAPIG_EA                 = 1; //${g^{{Ap}^{IG}}_{EA}}$    (long_name = 'Growth of gov investment specific productivity shock EA')
+
+            GAPOIL_EA                  = 1; //${g^{ApOIL}_{EA}}$        (long_name = 'Growth of oil specific productivity shock EA')                     
+
+            GACTR_EA                   = 1; //${g^{ACTR}_{EA}}$         (long_name = 'Growth of active rate of population EA')                                    
+
+            GHPERE_EA                  = 1; //${g^{HPERE}_{EA}}$        (long_name = 'Growth of hours worked per employee EA')
+
+            GPARTR_EA                  = 1; //${g^{PARTR}_{EA}}$        (long_name = 'Growth of participation rate EA')
+
+            GPOP_EA                    = 1; //${g^{POP}_{EA}}$          (long_name = 'Growth of population EA')             
+
+            GNTREND_EA                 = 1; //${g^{NTREND}_{EA}}$       (long_name = 'Growth of employment trend EA')        
+
+            //GYTREND_EA                 = 1; //${g^{YTREND}_{EA}}$       (long_name = 'Growth of GDP EA')        
+
+            PHIC_EA                    = 1; //${\pi^{C}_{EA}}$          (long_name = 'Consumption inflation EA')            
+
+            PHICVAT_EA                 = 1; //${\pi^{CVAT}_{EA}}$       (long_name = 'Consumption VAT inflation EA')   
+
+            PHIG_EA                    = 1; //${\pi^{G}_{EA}}$          (long_name = 'Government consumption inflation EA')
+
+            PHII_EA                    = 1; //${\pi^{I}_{EA}}$          (long_name = 'Private investment inflation EA')  
+
+            PHIIG_EA                   = 1; //${\pi^{IG}_{EA}}$         (long_name = 'Government investment inflation EA')  
+
+            PHIY_EA                    = 1; //${\pi^{Y}_{EA}}$          (long_name = 'GDP inflation EA')  
+
+            PHIYOBS_EA                 = 1; //${\pi^{YOBS}_{EA}}$       (long_name = 'GDP OBS inflation EA')  
+
+            PHIM_EA                    = 1; //${\pi^{X}_{EA}}$          (long_name = 'Import price inflation EA')   
+
+            PHIX_EA                    = 1; //${\pi^{M}_{EA}}$          (long_name = 'Export price inflation EA')  
+
+            PHIW_EA                    = 1; //${\pi^{W}_{EA}}$          (long_name = 'Wage inflation EA')  
+
+           
+
+                APC_EA                                    = 1; //${A^{{p}^{C}}_{EA}}$        (long_name = 'Private consumption specific productivity shock EA')
+
+                APG_EA                                    = 1; //${A^{{p}^{G}}_{EA}}$        (long_name = 'Gov consumption specific productivity shock EA')
+
+                API_EA                                    = 1; //${A^{{p}^{I}}_{EA}}$        (long_name = 'Private investment specific productivity shock EA')
+
+                //APIG_EA                                   = 1; //${A^{{p}^{IG}}_{EA}}$     (long_name = 'Gov investment specific productivity shock EA')
+
+                APOIL_EA                                  = 1; //${A^{{p}^{OIL}}_{EA}}$    (long_name = 'Oil specific productivity shock EA')
+
+                ACTR_EA                                   = 1; //${{ACTR}_{EA}}$             (long_name = 'Active population rate EA')
+
+                NTREND_EA                                 = 1; //${\bar{N_{EA}}}$            (long_name = 'Total employment trend EA')
+
+                PARTR_EA                                  = 1; //${{PARTR}_{EA}}$            (long_name = 'Participation rate EA')
+
+                POP_EA                                    = 1; //${{POP}_{EA}}$              (long_name = 'Population EA')
+
+                PY_EA                                     = 1; //${P^{Y}_{EA}}$              (long_name = 'GDP deflator EA')               
+
+                //YTREND_EA                                 = 1; //${\bar{Y_{EA}}}$            (long_name = 'GDP trend EA')    
+
+           
+
+        // Non-stationary variables 
+
+        // Nominal variables
+
+            HPERE_EA                    = 1; //${{HPERE}_{EA}}$               (long_name = 'Hours worked per employed EA')
+
+            AY_EA                                     = 1; //${A^Y_{EA}}$                (long_name = 'Technology shock EA')
+
+            A_EA                            = 1; //${A_{EA}}$          (long_name = 'Total Asset Holding EA')
+
+            B_EA                            = 1; //${B_{EA}}$          (long_name = 'Total Bonds Holding EA')
+
+            BG_EA                           = 1; //${B^{G}_{EA}}$      (long_name = 'Total Nominal Government Debt EA' )            
+
+            RG_EA                           = 1; //${R^{G}_{EA}}$      (long_name = 'Nominal Gov Revenues EA') 
+
+            PS_EA                           = 1; //$(P^{S}_{EA})$     (long_name = 'Stock price in EA')
+
+            W_EA                            = 1; //${W_{EA}}$          (long_name = 'Wages EA')
+
+            BW_EA                           = 1; //${B^{w}_{EA}}$      (long_name = 'International Bond held in EA')  
+
+            NFA_EA                          = 1; //${NFA_{EA}}$           (long_name = 'Net foreign Assets EA')
+
+             PX_EA                           = 1; //${P^{X}_{EA}}$     (long_name = 'Total export price EA')
+
+            PM_EA                           = 1; //${P^{M}_{EA}}$     (long_name = 'Import price EA')
+
+            PCVAT_EA                        = 1; //${P^{C,vat}_{EA}}$ (long_name = 'Final Consumption (VAT) price EA')
+
+            PC_EA                           = 1; //${P^{C}_{EA}}$     (long_name = 'Consumption price EA')
+
+            PG_EA                           = 1; //${P^{G}_{EA}}$     (long_name = 'Public goods price EA')
+
+            PIG_EA                          = 1; //${P^{IG}_{EA}}$    (long_name = 'Gov investment price EA')
+
+            PI_EA                           = 1; //${P^{I}_{EA}}$     (long_name = 'Investment price EA')
+
+            PM_EA                           = 1; //${P^{M}_{EA}}$     (long_name = 'Import price EA')
+
+            POIL_EA                         = 1; //${P^{Oil}_{EA}}$   (long_name = 'Oil price EA')
+
+            PO_EA                           = 1; //${P^{O}_{EA}}$     (long_name = 'Total output price deflator EA')                         
+
+            PX_EA                           = 1; //${P^{X}_{EA}}$     (long_name = 'Total export price EA')
+
+            PYOBS_EA                        = 1; //${P^{Y,obs}_{EA}}$ (long_name = 'GDP deflator used by statistical offices EA')
+
+            LAMBDAS_EA                 = 1; //${\lambda^{s}_{EA}}$   (long_name = 'Savers Budget constraint Lagrange multiplier EA')
+
+            LAMBDAC_EA                 = 1; //${\lambda^{s}_{EA}}$   (long_name = 'Savers Budget constraint Lagrange multiplier EA')
+
+            VLS_EA                 = 1; //${\lambda^{s}_{EA}}$   (long_name = 'Savers Budget constraint Lagrange multiplier EA')
+
+            VLC_EA                 = 1; //${\lambda^{s}_{EA}}$   (long_name = 'Savers Budget constraint Lagrange multiplier EA')
+
+            VL_EA                 = 1; //${\lambda^{s}_{EA}}$   (long_name = 'Savers Budget constraint Lagrange multiplier EA')
+
+            C_EA                               = 1; //${C_{EA}}$       (long_name = 'Total Consumption EA')
+
+            CC_EA                              = 1; //${C^{c}_{EA}}$   (long_name = 'Consumption of cc hh in EA')  
+
+            CS_EA                              = 1; //${C^{s}_{EA}}$   (long_name = 'Consumption of Savers in EA')
+
+            CX_EA                               = 1; //${C_{EA}}$       (long_name = 'Total Consumption EA')
+
+            EMPL_EA                                = 1; //${L_{EA}}$     (long_name = 'Employment in EA')  
+
+            L_EA                                = 1; //${L_{EA}}$     (long_name = 'Employment in EA')  
+
+            N_EA                               = 1; //${N_{EA}}$       (long_name = 'Total Employment in hours EA')
+
+            NS_EA                              = 1; //${N^{s}_{EA}}$   (long_name = 'Employment of Savers EA')
+
+            NC_EA                              = 1; //${N^{c}_{EA}}$   (long_name = 'Employment of Credit constrained hhs EA')
+
+            G_EA                           = 1; //${G_{EA}}$           (long_name = 'Government consumption EA')
+
+            IG_EA                          = 1; //${IG_{EA}}$          (long_name = 'Government investment EA')
+
+            M_EA                           = 1; //${M_{EA}}$           (long_name = 'Total non-oil imports EA')        
+
+            MTOT_EA                           = 1; //${M_{EA}}$           (long_name = 'Total non-oil imports EA')        
+
+            MC_EA                          = 1; //${M^{C}_{EA}}$         (long_name = 'Private consumption imports EA')    
+
+            MG_EA                          = 1; //${M^{G}_{EA}}$         (long_name = 'Government consumption imports EA')    
+
+            MI_EA                          = 1; //${M^{I}_{EA}}$         (long_name = 'Private investment imports EA')    
+
+            MIG_EA                         = 1; //${M^{IG}_{EA}}$        (long_name = 'Government investment imports EA')    
+
+            PMTOT_EA                      = 1; //${P^{Mtot}M^{tot}_{EA}}$     (long_name = 'Total imports EA')
+
+            TB_EA                               = 1; //${TB_{EA}}$                       (long_name = 'Trade Balance EA')          
+
+            ADJ_EA                         = 1; //${{adj}_{EA}}$       (long_name = 'Aggregate Adjustment costs EA')
+
+            ADJ_PY_EA                      = 1; //${{adj}^{py}_{EA}}$  (long_name = 'Pricing adjustment costs EA')
+
+            ADJ_N_EA                       = 1; //${{adj}^{N}_{EA}}$   (long_name = 'Employment adjustment costs EA')
+
+            ADJ_CU_EA                      = 1; //${{adj}^{cu}_{EA}}$  (long_name = 'Capacity Utilization adjustment costs EA')
+
+            ADJ_I_EA                       = 1; //${{adj}^{I}_{EA}}$   (long_name = 'Investment adjustment costs EA')
+
+            D_EA                           = 1; //${d_{EA}}$           (long_name = 'Dividends EA')
+
+            O_EA                           = 1; //${O_{EA}}$           (long_name = 'Total output in EA')            
+
+            OC_EA                          = 1; //${OC_{EA}}$          (long_name = 'Total private consumption output in EA')
+
+            OG_EA                          = 1; //${OG_{EA}}$          (long_name = 'Total government consumption output in EA')
+
+            OI_EA                          = 1; //${OI_{EA}}$          (long_name = 'Total private investment output in EA')
+
+            OIG_EA                         = 1; //${OIG_{EA}}$         (long_name = 'Total government investment output in EA')
+
+            OIL_EA                         = 1; //${OIL_{EA}}$         (long_name = 'OIL used in EA')  
+
+            DIVM_EA                           = 1; //${T_{EA}}$           (long_name = 'Transfers EA') 
+
+            T_EA                           = 1; //${T_{EA}}$           (long_name = 'Transfers EA') 
+
+            TC_EA                          = 1; //${T^{c}_{EA}}$       (long_name = 'Government transfers for constrained households EA')
+
+            TS_EA                          = 1; //${T^{s}_{EA}}$       (long_name = 'Government transfers for Savers EA')
+
+            X_EA                           = 1; //${X_{EA}}$           (long_name = 'Total Exports EA')        
+
+            Y_EA                           = 1; //${Y_{EA}}$           (long_name = 'GDP EA')
+
+            Ystar_EA                       = 1; //${Y^{*}_{EA}}$           (long_name = 'GDP no fixed cost EA')
+
+            YOBS_EA                           = 1; //${Y_{EA}}$           (long_name = 'GDP EA')
+
+            TFP_EA                               = 1; //${{TFP}_{EA}}$  (long_name = 'Total Factor Productivity EA')
+
+            I_EA                               = 1; //${I_{EA}}$        (long_name = 'Private Investment EA')
+
+            K_EA                               = 1; //${K_{EA}}$        (long_name = 'Private Capital EA')
+
+            KG_EA                              = 1; //${K^{G}_{EA}}$    (long_name = 'Governmental capital EA')
+
+            KTOT_EA                            = 1; //${K^{tot}_{EA}}$  (long_name = 'Total Capital EA')
+
+            BY_EA                      = 1; //${BY_{EA}}$              (long_name = 'Nominal bonds share EA')
+
+            BGY_EA                     = 1; //${BGY_{EA}}$             (long_name = 'Nominal gov. bonds share EA')
+
+            CY_EA                      = 1; //${CY_{EA}}$              (long_name = 'Nominal consumption share EA')
+
+            CGY_EA                     = 1; //${GY_{EA}}$              (long_name = 'Nominal gov. consumption share EA')
+
+            IY_EA                      = 1; //${IY_{EA}}$              (long_name = 'Nominal investment share EA')
+
+            IGY_EA                     = 1; //${IGY_{EA}}$             (long_name = 'Nominal gov. investment share EA') 
+
+            MTOTY_EA                      = 1; //${MY_{EA}}$              (long_name = 'Nominal import share EA') 
+
+            XY_EA                      = 1; //${XY_{EA}}$              (long_name = 'Nominal export share EA') 
+
+            WY_EA                      = 1; //${WY_{EA}}$              (long_name = 'Nominal wage share EA') 
+
+            GC_EA                      = 1; //${g^C_{EA}}$              (long_name = 'Growth rate of private consumption EA')  
+
+            GCC_EA                     = 1; //${g^{CC}_{EA}}$              (long_name = 'Growth rate of private consumption of constrained EA')  
+
+            GCS_EA                     = 1; //${g^{CS}_{EA}}$              (long_name = 'Growth rate of private consumption of savers EA')  
+
+            GG_EA                      = 1; //${g^G_{EA}}$              (long_name = 'Growth rate of gov consumption EA')    
+
+            GI_EA                      = 1; //${g^I_{EA}}$              (long_name = 'Growth rate of private investment EA')  
+
+            GIG_EA                     = 1; //${g^{IG}_{EA}}$             (long_name = 'Growth rate of gov investment EA')  
+
+            GY_EA                      = 1; //${g^{Y}_{EA}}$              (long_name = 'Growth rate of GDP EA')  
+
+            NFAY_EA                    = 1; //${NFAY_{EA}}$            (long_name = 'Nominal net foreign assets share EA')
+
+            TBY_EA                     = 1; //${TBY_{EA}}$             (long_name = 'Nominal trade balance share EA')            
+
+            //APOIL_EA                   = 1; //${A^{{p}^{OIL}}_{EA}}$ (long_name = 'Oil specific productivity shock EA')
+
+            DELTAK_EA                  = 1; //${\delta^{k}_{EA}}$      (long_name = 'Capital depreciation rate EA')
+
+            INOM_EA                    = 1; //${i^{p}_{EA}}$            (long_name = 'Nominal policy interest rate EA')
+
+            INOMG_EA                   = 1; //${i^{g}_{EA}}$           (long_name = 'Nominal Interest Rate on Domestic Bonds of EA') 
+
+            INOMS_EA                   = 1; //${i^{s}_{EA}}$           (long_name = 'Nominal Interest Rate on Stocks of EA')
+
+            MUY_EA                     = 1; //${\mu^{Y}_{EA}}$         (long_name = 'Production fct Lagrange multiplier EA')
+
+            PHICPI_EA                  = 1; //${\pi^{CPI}_{EA}}$       (long_name = 'CPI inflation EA')
+
+            PHIRULC_EA                 = 1; //${\pi^{rulc}_{EA}}$      (long_name = 'Real Unit Labour cost inflation rate in EA')            
+
+            Q_EA                       = 1; //${Q_{EA}}$               (long_name = 'Tobins Q EA')
+
+            CU_EA                      = 1; //${{cu}_{EA}}$            (long_name = 'Capacity Utilization EA')
+
+            S_EA                           = 1; //${S_{EA}}$          (long_name = 'Total Share Holding by Savers in EA')
+
+            STOT_EA                        = 1; //${STOT_{EA}}$       (long_name = 'Total Supply of Domestic Stocks EA') 
+
+            ZEPS_AY_EA                 = 1; //${\varepsilon^AY_{EA}}$   (long_name = 'Technology shock EA')
+
+            ZEPS_TAY_EA                  = 1; //${\varepsilon^{TUC}_{EA}}$   (long_name = 'Temporary consumption shock EA')            
+
+            ZEPS_FQ_EA                 = 1; //${\varepsilon^FQ_{EA}}$   (long_name = 'Fly to Quality shock EA')
+
+            ZEPS_BW_EA                 = 1; //${\varepsilon^{BW}_{EA}}$ (long_name = 'Preference for international bonds shock EA')
+
+            ZEPS_B_EA                  = 1; //${\varepsilon^B_{EA}}$   (long_name = 'Preference for bonds shock EA')
+
+            ZEPS_G_EA                  = 1; //${\varepsilon^G_{EA}}$   (long_name = 'Gov consumption shock EA')
+
+            ZEPS_IG_EA                 = 1; //${\varepsilon^{IG}_{EA}}$ (long_name = 'Gov investment shock EA')
+
+            ZEPS_INOM_EA               = 1; //${\varepsilon^{inom}_{EA}}$   (long_name = 'Taylor rule shock EA')            
+
+            ZEPS_M_EA                  = 1; //${\varepsilon^M_{EA}}$   (long_name = 'Import shock EA')
+
+            ZEPS_MUY_EA                  = 1; //${\varepsilon^{UC}_{EA}}$   (long_name = 'Preference shock EA')            
+
+            ZEPS_UC_EA                  = 1; //${\varepsilon^{UC}_{EA}}$   (long_name = 'Preference shock EA')            
+
+            ZEPS_TUC_EA                  = 1; //${\varepsilon^{TUC}_{EA}}$   (long_name = 'Temporary consumption shock EA')            
+
+            ZEPS_TC_EA                  = 1; //${\varepsilon^{TUC}_{EA}}$   (long_name = 'Temporary consumption shock EA')            
+
+            ZEPS_TUW_EA                  = 1; //${\varepsilon^{TUC}_{EA}}$   (long_name = 'Temporary consumption shock EA')            
+
+            ZEPS_TUCC_EA                  = 1; //${\varepsilon^{TUCC}_{EA}}$   (long_name = 'Temporary CC consumption shock EA') 
+
+            ZEPS_TUS_EA                  = 1; //${\varepsilon^{TUS}_{EA}}$   (long_name = 'Temporary rpk consumption shock EA')             
+
+            DUMMY_INV_EA               = 1;
+
+            ZEPS_S_EA                  = 1; //${\varepsilon^S_{EA}}$   (long_name = 'Preference for stocks shock EA')
+
+            ZEPS_T_EA                  = 1; //${\varepsilon^T_{EA}}$   (long_name = 'transfers shock EA')
+
+            ZEPS_U_EA                  = 1; //${\varepsilon^U_{EA}}$   (long_name = 'Phillips curve shock EA')
+
+            ZEPS_PX_EA                 = 1; //${\varepsilon^{PX}_{EA}}$   (long_name = 'Export price shock EA')
+
+            LE_EA             = 1; //${e_{EA}}$              (long_name = 'Log of nominal effective exchange rate EA')                             
+
+            LRER_EA           = 1; //${rer_{EA}}$            (long_name = 'Log of real effective exchange rate EA')                             
+
+            LTOT_EA           = 1; //${tot_{EA}}$            (long_name = 'Log of terms of trade EA')    
+
+            LAPC_EA           = 1; //${apc_{EA}}$              (long_name = 'Log of consumption specific productivity shock EA')  
+
+            LAPG_EA           = 1; //${apg_{EA}}$              (long_name = 'Log of gov. consumption specific productivity shock EA')  
+
+            LAPI_EA           = 1; //${api_{EA}}$              (long_name = 'Log of private investment specific productivity shock EA')  
+
+            LACTR_EA          = 1; //${actr_{EA}}$             (long_name = 'Log of active rate population EA')  
+
+            LNTREND_EA        = 1; //${\bar{n_{EA}}}$          (long_name = 'Log of total employment trend EA')   
+
+            LPARTR_EA         = 1; //${partr_{EA}}$            (long_name = 'Log of participation rate EA')  
+
+            LPOP_EA           = 1; //${pop_{EA}}$              (long_name = 'Log of population EA')  
+
+            LPI_EA            = 1; //${p^{y}_{EA}}$            (long_name = 'Log of GDP deflator EA')                                       
+
+            LPC_EA            = 1; //${p^{y}_{EA}}$            (long_name = 'Log of GDP deflator EA')                                       
+
+            LPCVAT_EA            = 1; //${p^{y}_{EA}}$            (long_name = 'Log of GDP deflator EA')                                       
+
+            LPG_EA            = 1; //${p^{y}_{EA}}$            (long_name = 'Log of GDP deflator EA')                                       
+
+            LPY_EA            = 1; //${p^{y}_{EA}}$            (long_name = 'Log of GDP deflator EA')                                       
+
+            LPYOBS_EA            = 1; //${p^{y}_{EA}}$            (long_name = 'Log of GDP deflator EA')                                       
+
+            //LMTREND_EA        = 1; //${\bar{y_{EA}}}$          (long_name = 'Log of GDP trend EA')  
+
+            //LOTREND_EA        = 1; //${\bar{y_{EA}}}$          (long_name = 'Log of GDP trend EA')  
+
+            //LYTREND_EA        = 1; //${\bar{y_{EA}}}$          (long_name = 'Log of GDP trend EA')  
+
+            //LZTREND_EA        = 1; //${\bar{y_{EA}}}$          (long_name = 'Log of GDP trend EA')  
+
+            LC_EA             = 1; //${c_{EA}}$                (long_name = 'Log of consumption EA')  
+
+            LCS_EA            = 1; //${cs_{EA}}$               (long_name = 'Log of consumption of Savers EA') 
+
+            LCC_EA            = 1; //${cc_{EA}}$               (long_name = 'Log of consumption of liquidity constrained EA')
+
+            LG_EA             = 1; //${g_{EA}}$                (long_name = 'Log of gov. consumption EA')  
+
+            LIG_EA            = 1; //${ig_{EA}}$                (long_name = 'Log of gov. investment EA') 
+
+            LI_EA             = 1; //${i_{EA}}$                (long_name = 'Log of private investment EA') 
+
+            LY_EA             = 1; //${y_{EA}}$                (long_name = 'Log of GDP EA')
+
+            LYOBS_EA             = 1; //${y_{EA}}$                (long_name = 'Log of GDP EA')
+
+            LA_EA             = 1; //${a_{EA}}$                (long_name = 'Log of total financial wealth EA')               
+
+            //LB_EA             = 1; //${b_{EA}}$                (long_name = 'Log of bonds holding EA')
+
+            LBG_EA            = 1; //${bg_{EA}}$               (long_name = 'Log of gov. bond holding EA')
+
+            LRG_EA            = 1; //${rg_{EA}}$               (long_name = 'Log of gov. revenue EA')
+
+            LW_EA             = 1; //${w_{EA}}$                (long_name = 'Log of wages EA')
+
+            LOIL_EA           = 1; //${oil_{EA}}$              (long_name = 'Log of oil EA') 
+
+            LPOIL_EA          = 1; //${p^{oil}_{EA}}$          (long_name = 'Log of oil price EA')
+
+            LPX_EA            = 1; //${p^{x}_{EA}}$            (long_name = 'Log of export price EA')
+
+            LPMTOT_EA            = 1; //${p^{m}_{EA}}$            (long_name = 'Log of import price EA')
+
+            LPO_EA            = 1; //${p^{o}_{EA}}$            (long_name = 'Log of total output price EA')
+
+            LM_EA             = 1; //${m_{EA}}$                (long_name = 'Log of imports EA')  
+
+            LX_EA             = 1; //${x_{EA}}$                (long_name = 'Log of exports EA') 
+
+            LT_EA             = 1; //${t_{EA}}$                (long_name = 'Log of transfers EA')
+
+            LTC_EA            = 1; //${tc_{EA}}$               (long_name = 'Log of transfers to CC households EA')
+
+            LTS_EA            = 1; //${ts_{EA}}$               (long_name = 'Log of transfers to Savers EA')
+
+                    LRER_RoW_EA   = 1; //${rer_{RoW,EA}}$           (long_name = 'Log of bilateral real effective exchange rate EA')  
+
+                    WT_RoW_EA  = 1; //${WT_{RoW,EA}}$            (long_name = 'Bilateral trade weight of RoW trade partner in domestic trade of EA')  
+
+                    LE_RoW_EA  = 1; //${e_{RoW,EA}}$             (long_name = 'Log of bilateral nominal exchange rate')     
+
+        //
+
+        // Rest of the world (RoW) definitions
+
+        //
+
+            GAY_RoW                     = 1; //${g^{A^Y}_{RoW}}$          (long_name = 'Productivity production fct RoW')
+
+            GAPC_RoW                    = 1; //${g^{{Ap}^{C}}_{RoW}}$     (long_name = 'Growth of private consumption specific productivity shock RoW')
+
+            GPOP_RoW                    = 1; //${g^{POP}_{RoW}}$          (long_name = 'Growth of population RoW')  
+
+            GYTREND_RoW                 = 1; //${g^{YTREND}_{RoW}}$       (long_name = 'Growth of GDP RoW')        
+
+            PHIC_RoW                    = 1; //${\pi^{C}_{RoW}}$          (long_name = 'Consumption inflation rate in RoW')            
+
+            PHIY_RoW                    = 1; //${\pi^{Y}_{RoW}}$          (long_name = 'GDP inflation RoW')               
+
+            PHIM_RoW                    = 1; //${\pi^{X}_{RoW}}$          (long_name = 'Import price inflation RoW')   
+
+            PHIX_RoW                    = 1; //${\pi^{M}_{RoW}}$          (long_name = 'Export price inflation RoW')
+
+                        GAPBRENT_RoW                  = 1; //${g^{ApBRENT}_{RoW}}$          (long_name = 'Growth of oil specific productivity RoW')  
+
+                        APBRENT_RoW                  = 1; //${A^{{p}^{brent}}_{RoW}}$          (long_name = 'Growth of oil specific productivity RoW')
+
+                APC_RoW                                 = 1; //${A^{{p}^{C}}_{RoW}}$        (long_name = 'Private consumption specific productivity shock RoW')
+
+                POP_RoW                                 = 1; //${{POP}_{RoW}}$                (long_name = 'Population RoW')
+
+                PY_RoW                                  = 1; //${P^{Y}_{RoW}}$              (long_name = 'GDP deflator RoW')
+
+                YTREND_RoW                              = 1; //${\bar{Y_{RoW}}}$           (long_name = 'GDP trend RoW')    
+
+               
+
+         
+
+        // RoW: nonstationary variables    
+
+            AY_RoW                                 = 1; //${A^Y_{RoW}}$                (long_name = 'Technology shock RoW')
+
+            A_RoW                                = 1; //${A_{RoW}}$                        (long_name = 'Total Asset Holding RoW')
+
+            TB_RoW                               = 1; //${TB_{RoW}}$                       (long_name = 'Trade Balance RoW')                     
+
+            LAMBDAS_RoW                     = 1; //${\lambda^{s}_{RoW}}$  (long_name = 'Savers Budget constraint Lagrange multiplier RoW')
+
+            BW_RoW                           = 1; //${B^{w}_{RoW}}$      (long_name = 'International Bond held in RoW')  
+
+            NFA_RoW                              = 1; //${NFA_{RoW}}$                        (long_name = 'Net Foreign Asset RoW');
+
+            C_RoW                           = 1; //${C_{RoW}}$         (long_name = 'Total Consumption RoW')                      
+
+            X_RoW                           = 1; //${X_{RoW}}$           (long_name  = 'Total Exports RoW')        
+
+            Y_RoW                           = 1; //${Y_{RoW}}$           (long_name =  'GDP RoW')                
+
+            YOBS_RoW                           = 1; //${Y_{RoW}}$           (long_name =  'GDP RoW')                
+
+            M_RoW                           = 1; //${M_{RoW}}$           (long_name = 'Total non-oil imports RoW')        
+
+            OIL_RoW                         = 1.3; //${OIL_{RoW}}$           (long_name = 'Oil supply RoW') 
+
+            PYOBS_RoW                           = 1; //${P^{C}_{RoW}}$      (long_name = 'Consumption price RoW')
+
+            PC_RoW                           = 1; //${P^{C}_{RoW}}$      (long_name = 'Consumption price RoW')
+
+           // POIL_RoW                           = 1; //${P^{oil}_{RoW}}$      (long_name = 'Oil price RoW')
+
+            PX_RoW                           = 1; //${P^{X}_{RoW}}$      (long_name = 'Export Price RoW')          
+
+            PM_RoW                           = 1; //${P^{M}_{RoW}}$      (long_name = 'Import Price RoW')  
+
+            CY_RoW                      = 1; //${CY_{RoW}}$              (long_name = 'Nominal consumption share RoW')
+
+            MY_RoW                      = 1; //${MY_{RoW}}$              (long_name = 'Nominal import RoW') 
+
+            XY_RoW                      = 1; //${XY_{RoW}}$              (long_name = 'Nominal export RoW') 
+
+            GC_RoW                      = 1; //${g^C_{RoW}}$              (long_name = 'Growth rate of private consumption RoW')  
+
+            GY_RoW                      = 1; //${g^Y_{RoW}}$              (long_name = 'Growth rate of GDP RoW')  
+
+            NFAY_RoW                    = 1; //${NFAY_{RoW}}$            (long_name = 'Nominal net foreign assets share RoW')
+
+            TBY_RoW                     = 1; //${TBY_{RoW}}$             (long_name = 'Nominal trade balance share RoW')
+
+            INOM_RoW                    = 1; //${i_{RoW}}$               (long_name = 'Nominal policy interest rate RoW')
+
+            ZEPS_A_RoW                  = 1; //${\varepsilon^A_{RoW}}$     (long_name = 'Preference for financial assets shock RoW')
+
+            ZEPS_B_RoW                  = 1; //${\varepsilon^B_{RoW}}$   (long_name = 'Preference for bonds shock RoW')
+
+            ZEPS_INOM_RoW               = 1; //${\varepsilon^{inom}_{RoW}}$   (long_name = 'Taylor rule shock RoW')  
+
+            ZEPS_TUC_RoW                  = 1; //${\varepsilon^{TUC}_{RoW}}$     (long_name = 'Temporary consumption shock RoW')             
+
+            ZEPS_UC_RoW                  = 1; //${\varepsilon^{UC}_{RoW}}$     (long_name = 'Preference shock RoW')             
+
+            ZEPS_Y_RoW                  = 1; //${\varepsilon^Y_{RoW}}$     (long_name = 'Phillips curve shock RoW')   
+
+               ZEPS_S_RoW                  = 1; //${\varepsilon^Y_{RoW}}$     (long_name = 'Phillips curve shock RoW')   
+
+            LE_RoW             = 1; //${e_{RoW}}$              (long_name = 'Log of nominal effective exchange rate RoW')                             
+
+            LRER_RoW           = 1; //${rer_{RoW}}$            (long_name = 'Log of real effective exchange rate RoW')                             
+
+            LTOT_RoW           = 1; //${tot_{RoW}}$            (long_name = 'Log of terms of trade RoW')    
+
+            LAPC_RoW           = 1; //${apc_{RoW}}$              (long_name = 'Log of consumption specific productivity shock RoW')  
+
+            LPOP_RoW           = 1; //${pop_{RoW}}$              (long_name = 'Log of population RoW')  
+
+            LYTREND_RoW        = 1; //${\bar{y_{RoW}}}$          (long_name = 'Log of GDP trend RoW') 
+
+                        LAPBRENT_RoW                  = 1; //${apbrent_{RoW}}$          (long_name = 'Growth of oil specific productivity RoW')
+
+            LPY_RoW            = 1; //${p^{y}_{RoW}}$            (long_name = 'Log of GDP deflator RoW')    
+
+            LPYOBS_RoW            = 1; //${p^{y}_{RoW}}$            (long_name = 'Log of GDP deflator RoW')    
+
+            LPX_RoW            = 1; //${p^{x}_{RoW}}$            (long_name = 'Log of export price RoW')
+
+            LPM_RoW            = 1; //${p^{m}_{RoW}}$            (long_name = 'Log of import price RoW')
+
+            LC_RoW             = 1; //${c_{RoW}}$                (long_name = 'Log of consumption RoW')  
+
+            LY_RoW             = 1; //${y_{RoW}}$                (long_name = 'Log of GDP RoW')
+
+            LYOBS_RoW             = 1; //${y_{RoW}}$                (long_name = 'Log of GDP RoW')
+
+            LX_RoW             = 1; //${x_{RoW}}$                (long_name = 'Log of exports RoW') 
+
+            LM_RoW             = 1; //${m_{RoW}}$                (long_name = 'Log of imports RoW')          
+
+            LOIL_RoW           = 1; //${oil_{RoW}}$              (long_name = 'Log of oil RoW') 
+
+                    LRER_EA_RoW   = 1; //${rer_{EA,RoW}}$           (long_name = 'Log of bilateral real effective exchange rate RoW')  
+
+                    WT_EA_RoW  = 1; //${WT_{EA,RoW}}$            (long_name = 'Bilateral trade weight of EA trade partner in domestic trade of RoW')  
+
+                    LE_EA_RoW  = 1; //${e_{EA,RoW}}$             (long_name = 'Log of bilateral nominal exchange rate')     
+
+                    PX_EA_RoW  = 1; //${e_{EA,RoW}}$             (long_name = 'Log of bilateral nominal exchange rate')     
+
+                    ZEPS_PX_EA_RoW =1;
+
+        // End of the rest of the world (RoW) definitions
+
+//
+
+// Bilateral definitions 
+
+//
+
+    // Exchange rates 
+
+		//"REA" in COUNTRIES 
+
+
+
+                E_EA_EA                      = 10; //${E_{EA,EA}}$  (long_name = 'Exchange rate from currency in EA to currency in EA')
+
+
+
+                E_RoW_EA                      = 10; //${E_{RoW,EA}}$  (long_name = 'Exchange rate from currency in RoW to currency in EA')
+
+                    S_EA_EA                   = 1; //${S_{EA,EA}}$   (long_name = 'Stock Shares of EA held in EA')   
+
+                    B_EA_EA                   = 1; //${B_{EA,EA}}$   (long_name = 'Gov Bonds of EA held in EA')                     
+
+                    ZEPS_B_EA_EA              = 1; //${\varepsilon_{B,EA,EA}}$   (long_name = 'shock to EA Preference for investing in bonds of country EA')
+
+                    ZEPS_S_EA_EA              = 1; //${\varepsilon_{S,EA,EA}}$   (long_name = 'shock to EA Preference for investing in stocks of country EA')
+
+                    M_RoW_EA                   = 1; //${M_{RoW,EA}}$   (long_name = 'Imports from RoW to EA')                       
+
+                    PM_RoW_EA       = 1; //${PM_{RoW,EA}}$                 (long_name = 'Import prices of RoW in EA')      
+
+                    PHIM_RoW_EA     = 1; //${\pi^{M}_{RoW,EA}}$            (long_name = 'Import price inflation between RoW and EA')
+
+    // Exchange rates 
+
+		//"REA" in COUNTRIES 
+
+
+
+                E_EA_RoW                      = 10; //${E_{EA,RoW}}$  (long_name = 'Exchange rate from currency in EA to currency in RoW')
+
+
+
+                E_RoW_RoW                      = 10; //${E_{RoW,RoW}}$  (long_name = 'Exchange rate from currency in RoW to currency in RoW')
+
+                    M_EA_RoW        = 1; //${M_{EA,RoW}}$                  (long_name = 'Imports from country EA to country RoW') 
+
+                    PM_EA_RoW                  = 1; //${PM_{EA,RoW}}$  (long_name = 'Import prices from country EA to RoW')                      
+
+                    ZEPS_M_EA_RoW   = 1; //${\varepsilon^{M}_{EA,RoW}}$    (long_name = 'Bilateral imports from country EA to country RoW shock')
+
+end;
