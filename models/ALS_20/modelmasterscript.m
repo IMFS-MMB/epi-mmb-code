@@ -12,13 +12,13 @@ main_uk
 % of the pandemic)
 %Consumption = (C_v1 - par_v1.c_ss) ./ par_v1.c_ss;
 %Labour = (H_v1 - par_v1.n_ss) ./ par_v1.n_ss;
-Output = uk_gdp;
+Output = day2week(uk_gdp);
 Consumption = Output;
-Labour = nan(size(uk_gdp,1),size(uk_gdp,2));
-Susceptibles = nan(size(uk_gdp,1),size(uk_gdp,2));
-Infected = uk_sir ;
-Recovered = nan(size(uk_gdp,1),size(uk_gdp,2));
-Deaths = uk_death ;
+Labour = nan(size(Output));
+Susceptibles = nan(size(Output));
+Infected = day2week(uk_sir) ;
+Recovered = nan(size(Output));
+Deaths = day2week(uk_death) ;
 Consumption_ss = Consumption(1);
 Labour_ss = Labour(1);
 Output_ss = Output(1);

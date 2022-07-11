@@ -270,187 +270,187 @@ uk_gdp(:,1) = baseg.prod(:,3);
 %uk_gdp(:,2) = baseg.prod(:,3);
 % uk_gdp(:,3) = trackg.prod(:,3);
 
-%-------------------    
-if 0   %commented out for baseline only, by KaiLong
-    h2 = figure('color','w');
-    p2 = semilogy(r.stime,uk_death*p.pop); hold on;
-    set(p2,r.style,vals)
-    legend(p2,legnom,'location','southoutside','NumColumns',3);
-    xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
-    ylim([1 Inf]);
-    set(gca,'fontsize',12');     
-    grid on
-    saveas(h2,append(folder,'uk_cf_death.pdf'));
-end
-%-------------------    
-if 0 %commented out for baseline only, by KaiLong
-    h3 = figure('color','w');
-    p3 = plot(r.stime,uk_gdp); hold on;
-    set(p3,r.style,vals)
-    legend(p3,legnom,'location','southoutside','NumColumns',3);
-    xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
-    ylim([-Inf, 0]);
-    set(gca,'fontsize',12');     
-    grid on
-    saveas(h3,append(folder,'uk_cf_gdp.pdf'));
-
-    close all
-    addpath('.');
-
-    cd figures_uk
-    %cd figures_nocc
-    %cd figures_nome
-
-    !find -name "*base*.pdf" -exec pdfcrop {} \;
-    !find -name "*lock*.pdf" -exec pdfcrop {} \;
-    !find -name "*track*.pdf" -exec pdfcrop {} \;
-    !find -name "*data*.pdf" -exec pdfcrop {} \;
-    !find -name "*cf_*.pdf" -exec pdfcrop {} \;
-    !rename -f 's/-crop.pdf/.pdf/' *-crop.pdf;
-    %!rename -f 's/base/uk_base/' base*;
-    %!rename -f 's/lock/uk_lock/' lock*;
-    %!rename -f 's/track/uk_track/' track*;
-    cd ..
-
-    %----------------------
-    %% early lockdown
-    %----------------------
-    % initialize
-    Ia = Ia0;
-    early = base;
-
-    % policies: 4.23: start asymp 6.1: reach max.
-    %https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic_in_the_United_Kingdom_(January%E2%80%93June_2020)
-    % Mar 15 lockdown imminent (t=85)
-    for t = 1:p.Nt
-        early(t).j = f.mit(t,65,65+ld0,ld1);
-        t0 = 0.0001;
-        t1 = 0.03;
-        t2 = 0.3;
-        q1 = 0.55;
-        if (t<42)
-            early(t).tau = p.omeg * [0.0;0.0];
-        elseif (t<51)	% Feb 1	first detection	(Jan 31 in Korea)
-            early(t).tau = p.omeg * [0.00;t0];
-        elseif (t<65)	% Feb 10 first quarantine
-            early(t).tau = p.omeg * [0.00;t0];
-            early(t).Q = 1;
-        elseif (t<93)	% Feb 24 testing restarts
-            early(t).tau = p.omeg * [0.00;t0+(t1-t0)*(t-64)/(92-64)];
-            early(t).Q = 2;
-            early(t).q = q1;%	q1*(t-92)/(124-92);
-    %    elseif (t<124)	% Mar 23 lockdown
-    %    	early(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];
-    %        early(t).Q = 2;
-    %        early(t).q = q1;%	q1*(t-92)/(124-92);
-        else	% Apr 23 a-testing starts / May 30: mass track and trace in place
-            early(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];%t0*(t-123)/(161-123)
-            early(t).Q = 2;
-            early(t).q = q1;
-        end
-    end
-    early = solvemodel(early,Ia,p);
-    % 
-
-    %----------------------
-    %% long lockdown
-    %----------------------
-    % initialize
-    Ia = Ia0;
-    long = base;
-
-    % policies: 4.23: start asymp 6.1: reach max.
-    %https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic_in_the_United_Kingdom_(January%E2%80%93June_2020)
-    % Mar 15 lockdown imminent (t=85)
-    for t = 1:p.Nt
-        long(t).j = f.mit(t,93,93+360,ld1);
-        t0 = 0.0001;
-        t1 = 0.03;
-        t2 = 0.3;
-        q1 = 0.55;
-        if (t<42)
-            long(t).tau = p.omeg * [0.0;0.0];
-        elseif (t<51)	% Feb 1	first detection	(Jan 31 in Korea)
-            long(t).tau = p.omeg * [0.00;t0];
-        elseif (t<65)	% Feb 10 first quarantine
-            long(t).tau = p.omeg * [0.00;t0];
-            long(t).Q = 1;
-        elseif (t<93)	% Feb 24 testing restarts
-            long(t).tau = p.omeg * [0.00;t0+(t1-t0)*(t-64)/(92-64)];
-            long(t).Q = 1;
-    %    elseif (t<124)	% Mar 23 lockdown
-    %    	long(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];
-    %        long(t).Q = 2;
-    %        long(t).q = q1;%	q1*(t-92)/(124-92);
-        else	% Apr 23 a-testing starts / May 30: mass track and trace in place
-            long(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];%t0*(t-123)/(161-123)
-            long(t).Q = 2;
-            long(t).q = q1;
-        end
-    end
-    long = solvemodel(long,Ia,p);% 
-
-    earlyg = plots(early,p,r,append(folder,'uk_early'));
-    longg = plots(long,p,r,append(folder,'uk_long'));
-
-    uk_sir(:,4) = longg.SIR(:,2);%-trackg.SIR(:,3);
-    uk_sir(:,5) = uk_sir(:,3);
-    uk_sir(:,3) = uk_sir(:,2);
-    uk_sir(:,2) = earlyg.SIR(:,2);%-baseg.SIR(:,3);
-
-    uk_death(:,4) = longg.D01(:,1);
-    uk_death(:,5) = uk_death(:,3);
-    uk_death(:,3) = uk_death(:,2);
-    uk_death(:,2) = earlyg.D01(:,1);
-
-    uk_gdp(:,4) = longg.prod(:,3);
-    uk_gdp(:,5) = uk_gdp(:,3);
-    uk_gdp(:,3) = uk_gdp(:,2);
-    uk_gdp(:,2) = earlyg.prod(:,3);
-
-    %-------------------    
-    h2 = figure('color','w');
-    p2 = semilogy(r.stime,uk_death*p.pop); hold on;
-    set(p2,r.style,vals2)
-    legend(p2,legnom2,'location','southoutside','NumColumns',3);
-    xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
-    ylim([1 Inf]);
-    set(gca,'fontsize',12');     
-    grid on
-    saveas(h2,append(folder,'uk_cf1_death.pdf'));
-
-    %-------------------    
-    h3 = figure('color','w');
-    p3 = plot(r.stime,uk_gdp); hold on;
-    set(p3,r.style,vals2)
-    legend(p3,legnom2,'location','southoutside','NumColumns',3);
-    xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
-    ylim([-Inf, 0]);
-    set(gca,'fontsize',12');     
-    grid on
-    saveas(h3,append(folder,'uk_cf1_gdp.pdf'));
-
-    close all
-    addpath('.');
-
-    cd figures_uk
-    %cd figures_nocc
-    %cd figures_nome
-
-    !find -name "*early*.pdf" -exec pdfcrop {} \;
-    !find -name "*long*.pdf" -exec pdfcrop {} \;
-    !find -name "*cf1*.pdf" -exec pdfcrop {} \;
-    !rename -f 's/-crop.pdf/.pdf/' *-crop.pdf;
-    %!rename -f 's/early/uk_early/' early*;
-    %!rename -f 's/long/uk_long/' long*;
-    cd ..
-
-    nmax = r.xaxis(end);
-    uk_tab(1,:) = floor(uk_death(nmax,:)*p.pop+0.5);
-    uk_tab(2,:) = sum(uk_gdp(31:nmax,:),1)/(nmax-30);
-
-    save uk_results
-
-    return
-end
+% %-------------------    
+% if 0   %commented out for baseline only, by KaiLong
+%     h2 = figure('color','w');
+%     p2 = semilogy(r.stime,uk_death*p.pop); hold on;
+%     set(p2,r.style,vals)
+%     legend(p2,legnom,'location','southoutside','NumColumns',3);
+%     xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
+%     ylim([1 Inf]);
+%     set(gca,'fontsize',12');     
+%     grid on
+%     saveas(h2,append(folder,'uk_cf_death.pdf'));
+% end
+% %-------------------    
+% if 0 %commented out for baseline only, by KaiLong
+%     h3 = figure('color','w');
+%     p3 = plot(r.stime,uk_gdp); hold on;
+%     set(p3,r.style,vals)
+%     legend(p3,legnom,'location','southoutside','NumColumns',3);
+%     xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
+%     ylim([-Inf, 0]);
+%     set(gca,'fontsize',12');     
+%     grid on
+%     saveas(h3,append(folder,'uk_cf_gdp.pdf'));
+% 
+%     close all
+%     addpath('.');
+% 
+%     cd figures_uk
+%     %cd figures_nocc
+%     %cd figures_nome
+% 
+%     !find -name "*base*.pdf" -exec pdfcrop {} \;
+%     !find -name "*lock*.pdf" -exec pdfcrop {} \;
+%     !find -name "*track*.pdf" -exec pdfcrop {} \;
+%     !find -name "*data*.pdf" -exec pdfcrop {} \;
+%     !find -name "*cf_*.pdf" -exec pdfcrop {} \;
+%     !rename -f 's/-crop.pdf/.pdf/' *-crop.pdf;
+%     %!rename -f 's/base/uk_base/' base*;
+%     %!rename -f 's/lock/uk_lock/' lock*;
+%     %!rename -f 's/track/uk_track/' track*;
+%     cd ..
+% 
+%     %----------------------
+%     %% early lockdown
+%     %----------------------
+%     % initialize
+%     Ia = Ia0;
+%     early = base;
+% 
+%     % policies: 4.23: start asymp 6.1: reach max.
+%     %https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic_in_the_United_Kingdom_(January%E2%80%93June_2020)
+%     % Mar 15 lockdown imminent (t=85)
+%     for t = 1:p.Nt
+%         early(t).j = f.mit(t,65,65+ld0,ld1);
+%         t0 = 0.0001;
+%         t1 = 0.03;
+%         t2 = 0.3;
+%         q1 = 0.55;
+%         if (t<42)
+%             early(t).tau = p.omeg * [0.0;0.0];
+%         elseif (t<51)	% Feb 1	first detection	(Jan 31 in Korea)
+%             early(t).tau = p.omeg * [0.00;t0];
+%         elseif (t<65)	% Feb 10 first quarantine
+%             early(t).tau = p.omeg * [0.00;t0];
+%             early(t).Q = 1;
+%         elseif (t<93)	% Feb 24 testing restarts
+%             early(t).tau = p.omeg * [0.00;t0+(t1-t0)*(t-64)/(92-64)];
+%             early(t).Q = 2;
+%             early(t).q = q1;%	q1*(t-92)/(124-92);
+%     %    elseif (t<124)	% Mar 23 lockdown
+%     %    	early(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];
+%     %        early(t).Q = 2;
+%     %        early(t).q = q1;%	q1*(t-92)/(124-92);
+%         else	% Apr 23 a-testing starts / May 30: mass track and trace in place
+%             early(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];%t0*(t-123)/(161-123)
+%             early(t).Q = 2;
+%             early(t).q = q1;
+%         end
+%     end
+%     early = solvemodel(early,Ia,p);
+%     % 
+% 
+%     %----------------------
+%     %% long lockdown
+%     %----------------------
+%     % initialize
+%     Ia = Ia0;
+%     long = base;
+% 
+%     % policies: 4.23: start asymp 6.1: reach max.
+%     %https://en.wikipedia.org/wiki/Timeline_of_the_COVID-19_pandemic_in_the_United_Kingdom_(January%E2%80%93June_2020)
+%     % Mar 15 lockdown imminent (t=85)
+%     for t = 1:p.Nt
+%         long(t).j = f.mit(t,93,93+360,ld1);
+%         t0 = 0.0001;
+%         t1 = 0.03;
+%         t2 = 0.3;
+%         q1 = 0.55;
+%         if (t<42)
+%             long(t).tau = p.omeg * [0.0;0.0];
+%         elseif (t<51)	% Feb 1	first detection	(Jan 31 in Korea)
+%             long(t).tau = p.omeg * [0.00;t0];
+%         elseif (t<65)	% Feb 10 first quarantine
+%             long(t).tau = p.omeg * [0.00;t0];
+%             long(t).Q = 1;
+%         elseif (t<93)	% Feb 24 testing restarts
+%             long(t).tau = p.omeg * [0.00;t0+(t1-t0)*(t-64)/(92-64)];
+%             long(t).Q = 1;
+%     %    elseif (t<124)	% Mar 23 lockdown
+%     %    	long(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];
+%     %        long(t).Q = 2;
+%     %        long(t).q = q1;%	q1*(t-92)/(124-92);
+%         else	% Apr 23 a-testing starts / May 30: mass track and trace in place
+%             long(t).tau = p.omeg * [0.00;t1+(t2-t1)*(t-92)/(161-92)];%t0*(t-123)/(161-123)
+%             long(t).Q = 2;
+%             long(t).q = q1;
+%         end
+%     end
+%     long = solvemodel(long,Ia,p);% 
+% 
+%     earlyg = plots(early,p,r,append(folder,'uk_early'));
+%     longg = plots(long,p,r,append(folder,'uk_long'));
+% 
+%     uk_sir(:,4) = longg.SIR(:,2);%-trackg.SIR(:,3);
+%     uk_sir(:,5) = uk_sir(:,3);
+%     uk_sir(:,3) = uk_sir(:,2);
+%     uk_sir(:,2) = earlyg.SIR(:,2);%-baseg.SIR(:,3);
+% 
+%     uk_death(:,4) = longg.D01(:,1);
+%     uk_death(:,5) = uk_death(:,3);
+%     uk_death(:,3) = uk_death(:,2);
+%     uk_death(:,2) = earlyg.D01(:,1);
+% 
+%     uk_gdp(:,4) = longg.prod(:,3);
+%     uk_gdp(:,5) = uk_gdp(:,3);
+%     uk_gdp(:,3) = uk_gdp(:,2);
+%     uk_gdp(:,2) = earlyg.prod(:,3);
+% 
+%     %-------------------    
+%     h2 = figure('color','w');
+%     p2 = semilogy(r.stime,uk_death*p.pop); hold on;
+%     set(p2,r.style,vals2)
+%     legend(p2,legnom2,'location','southoutside','NumColumns',3);
+%     xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
+%     ylim([1 Inf]);
+%     set(gca,'fontsize',12');     
+%     grid on
+%     saveas(h2,append(folder,'uk_cf1_death.pdf'));
+% 
+%     %-------------------    
+%     h3 = figure('color','w');
+%     p3 = plot(r.stime,uk_gdp); hold on;
+%     set(p3,r.style,vals2)
+%     legend(p3,legnom2,'location','southoutside','NumColumns',3);
+%     xlim([1 p.Nt]);xticks(r.xtnum);xticklabels(r.xtlab); 
+%     ylim([-Inf, 0]);
+%     set(gca,'fontsize',12');     
+%     grid on
+%     saveas(h3,append(folder,'uk_cf1_gdp.pdf'));
+% 
+%     close all
+%     addpath('.');
+% 
+%     cd figures_uk
+%     %cd figures_nocc
+%     %cd figures_nome
+% 
+%     !find -name "*early*.pdf" -exec pdfcrop {} \;
+%     !find -name "*long*.pdf" -exec pdfcrop {} \;
+%     !find -name "*cf1*.pdf" -exec pdfcrop {} \;
+%     !rename -f 's/-crop.pdf/.pdf/' *-crop.pdf;
+%     %!rename -f 's/early/uk_early/' early*;
+%     %!rename -f 's/long/uk_long/' long*;
+%     cd ..
+% 
+%     nmax = r.xaxis(end);
+%     uk_tab(1,:) = floor(uk_death(nmax,:)*p.pop+0.5);
+%     uk_tab(2,:) = sum(uk_gdp(31:nmax,:),1)/(nmax-30);
+% 
+%     save uk_results
+% 
+%     return
+% end
 
