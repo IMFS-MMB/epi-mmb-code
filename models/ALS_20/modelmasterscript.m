@@ -12,7 +12,8 @@ main_uk
 % of the pandemic)
 %Consumption = (C_v1 - par_v1.c_ss) ./ par_v1.c_ss;
 %Labour = (H_v1 - par_v1.n_ss) ./ par_v1.n_ss;
-Output = day2week(uk_gdp)
+Output = day2week(uk_gdp);
+Consumption = Output;
 Labour = nan(size(Output));
 Susceptibles = nan(size(Output));
 Infected = day2week(uk_sir) ;
