@@ -42,12 +42,15 @@ str = char(raw');
 fclose(fid); 
 jcode = jsondecode(str);
 
+%Remove because every model must be run with Dy 5.1
+%{
 if (jcode.Dynare_version ~= "0") && (jcode.Dynare_version ~= "??")
     dy_path=dy_root+jcode.Dynare_version+"/matlab";
     addpath(dy_path);
 elseif jcode.Dynare_version == "??"
     disp('Dynare path ??  Please check which is the correct version');
 end
+%}
 
 if inf_ini(1)==1
     helper=inf_ini(2);
