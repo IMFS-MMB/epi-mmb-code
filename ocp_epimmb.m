@@ -8,7 +8,7 @@ end
 ppp.path.root = convertCharsToStrings(pwd);
 ppp.path.working = fullfile(ppp.path.root, "working");
 ppp.path.share.dyModules =  fullfile(ppp.path.root, "shared", "dyModules") ;
-num_vars=7;
+num_vars=10;
 try
     rmdir(ppp.path.working,'s')
 end
@@ -69,7 +69,10 @@ if isfile('modelmasterscript.m')
     ress(5,:)=ress_load.Output;
     ress(6,:)=ress_load.Recovered;
     ress(7,:)=ress_load.Susceptibles;
-    
+    ress(8,:)=ress_load.Interest;
+    ress(9,:)=ress_load.Inflation;
+    ress(10,:)=ress_load.Investment;
+
     ress_ss(1)=ress_load_ss.Consumption_ss;
     ress_ss(2)=ress_load_ss.Deaths_ss;
     ress_ss(3)=ress_load_ss.Infected_ss;
@@ -77,6 +80,9 @@ if isfile('modelmasterscript.m')
     ress_ss(5)=ress_load_ss.Output_ss;
     ress_ss(6)=ress_load_ss.Recovered_ss;
     ress_ss(7)=ress_load_ss.Susceptibles_ss;
+    ress_ss(8)=ress_load_ss.Interest_ss;
+    ress_ss(9)=ress_load_ss.Inflation_ss;
+    ress_ss(10)=ress_load_ss.Investment_ss;
 
     ressnames=fieldnames(ress_load); %sorted list including SS
 else
@@ -95,21 +101,27 @@ if jcode.Code_type=="Dynare"
 
             if modelname=="LFA_22"
                   if series_ss == 0 
-                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths"| macrovar=="Interest";
                         series = 100*series_level;
                     else
                         series = 100*series_level;
-                    end    
+                    end
+                    if series==zeros(1,length(series))
+                        series=nan(1,length(series));
+                    end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end
                     result_mat(ind_macrovar,1:(maxhorizon-1)) = series(2:maxhorizon);
 
                   else
-                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths"| macrovar=="Interest";
                         series = 100*series_level;
                     else
                     series = 100*(series_level - series_ss)/series_ss;
+                    end
+                    if series==zeros(1,length(series))
+                        series=nan(1,length(series));
                     end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
@@ -122,7 +134,10 @@ if jcode.Code_type=="Dynare"
                         series = 100*series_level;
                     else
                         series = 100* series_level;
-                    end    
+                    end   
+                    if series==zeros(1,length(series))
+                        series=nan(1,length(series));
+                    end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end
@@ -133,6 +148,9 @@ if jcode.Code_type=="Dynare"
                         series = 100*series_level;
                     else
                     series = 100*(series_level - series_ss)/series_ss;
+                    end
+                    if series==zeros(1,length(series))
+                        series=nan(1,length(series));
                     end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
@@ -163,7 +181,10 @@ elseif jcode.Code_type=="Matlab"
                         series = 100*series_level;
                     else
                         series = 100* series_level;
-                    end    
+                    end
+                    if series==zeros(1,length(series))
+                        series=nan(1,length(series));
+                    end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end
@@ -171,6 +192,9 @@ elseif jcode.Code_type=="Matlab"
 
                 else
                     series = 100*(series_level - series_ss)/series_ss;
+                    if series==zeros(1,length(series))
+                        series=nan(1,length(series));
+                    end
                     if length(series) < maxhorizon
                         series(end+1:maxhorizon)=nan;
                     end                    
