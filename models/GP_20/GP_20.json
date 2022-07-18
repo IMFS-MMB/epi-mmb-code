@@ -5,6 +5,15 @@
   "initial_name": "eps",
   "initial_value": 0.001,
   "Code_type": "Dynare",
-  "Dynare_version": "4.6.1"
+  "Dynare_version": "4.6.1" ,
+  "variables": [ 
+			"Consumption",
+			"Labour",
+			"Output",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
 
 }
