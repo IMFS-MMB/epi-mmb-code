@@ -7,7 +7,4 @@ Susceptibles = s;
 Infected = in;
 Recovered = r;
 Deaths = d;
-Interest = 0;
-Inflation = 0;
-Investment = 0;
 // ================

@@ -388,6 +388,24 @@ tax12 = sum(exit_tau_2,1)';
 T = table(ID,NOC,NOC_short,dummy_home,Relativehomewage,baseline,tax5,tax12);
 writetable(T,'endogenous_occupations.xlsx','Sheet',1,'Range','A1:H41', 'WriteVariableNames', 1);
 
+Susceptibles=S_endog;
+Infected=I_endog;
+Recovered=R_endog;
+Deaths=D_endog;
+Labour=theta_total_endog;
+Consumption=C_dev_endog./100;
+Output=Y_endog;
+
+Consumption_ss=0;%C_ss
+Output_ss=Y_ss(1);
+Labour_ss=theta_ss;
+Susceptibles_ss=0;
+Infected_ss=0;
+Recovered_ss=0;
+Deaths_ss=0;
+
+save('simulated_results.mat','Consumption','Labour','Output','Deaths','Susceptibles','Infected','Recovered');
+save('simulated_results_ss.mat','Consumption_ss','Labour_ss','Output_ss','Deaths_ss','Susceptibles_ss','Infected_ss','Recovered_ss');
 
 
 %% Figures

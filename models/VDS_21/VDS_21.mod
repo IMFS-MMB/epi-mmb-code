@@ -12,11 +12,11 @@ predetermined_variables K;
 
 // Exogenous Variables 
 
-varexo Itilde; 
+varexo Itilde ;
 
 // Parameters 
 
-parameters alphav betav gammav epsilonv betta h theta lambda epsilon alfa delta omega_g kappa epsilon_p theta_p chi zetta phi_i phi_pi phi_y tau omega psi_bar ;
+parameters I0 alphav betav gammav epsilonv betta h theta lambda epsilon alfa delta omega_g kappa epsilon_p theta_p chi zetta phi_i phi_pi phi_y tau omega psi_bar ;
 
 
 alphav=0.40000000;
@@ -42,6 +42,9 @@ phi_y=0.08000000;
 tau=0.00100000;
 omega=10.00000000;
 psi_bar=0.00000000;
+
+load inf_ini
+I0=helper;
 
 
 model;
@@ -247,6 +250,7 @@ Q_Z=15.28624109;
 V1=0.06162803;
 V2=6.22505338;
 Itilde=0.10000000;
+
 @# include "commonVarSS.mod" // added by epi-mmb team
 end;
 
@@ -287,6 +291,7 @@ Q_Z=16.98469732;
 V1=0.06847553;
 V2=6.91671987;
 Itilde=0.00000088;
+@# include "commonVarSS.mod" // added by epi-mmb team
 end;
 
 check;
@@ -449,10 +454,6 @@ periods 1:149;
 values (xx);
 end;
 
-
-
-
-
 perfect_foresight_setup(periods=149);
 //perfect_foresight_solver(lmmcp);
 perfect_foresight_solver(maxit=100, tolf=1e-25, stack_solve_algo=0, linear_approximation);
@@ -461,6 +462,5 @@ perfect_foresight_solver(maxit=100, tolf=1e-25, stack_solve_algo=0, linear_appro
 results.oo_ = oo_ ;
 results.M_ = M_;
 save simulated_results_base;
-
-%@# include "saveResults.mod"   // added by epi-mmb team
+@# include "saveResults.mod"   // added by epi-mmb team
 

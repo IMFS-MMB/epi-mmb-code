@@ -1,0 +1,31 @@
+{
+  "name": "F_21",
+  "author": "Faria-e-Castro",
+  "title": "Fiscal Policy during a Pandemic",
+  "year": 2021,
+  "publication": "Journal of Economic Dynamics and Control (125, 104088).",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "y0(3)",
+  "initial_value": 0.0000001,
+  "Code_type": "Matlab",
+  "Dynare_version": "0",
+  "Model_type": 1,
+  "Features":{
+		"fiscal_policy": 1, 
+		"monetary_policy": 1, 
+		"financial": 0, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 1, 
+		"optimal_policy": 0 
+   }, 
+
+  "variables": [ 
+			"Output",
+			"Consumption",
+			"Labour", 
+			"Inflation", 
+			"Interest"
+			]
+}

@@ -24,8 +24,6 @@
   "variables": [ 
 			"Output",
 			"Consumption",
-			"Labour", 
-			"Inflation", 
-			"Interest"
+			"Labour"
 			]
 }
