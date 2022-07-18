@@ -1,0 +1,33 @@
+{
+  "name": "CDL_21",
+  "title": "Pandemics Through the Lens of Occupations",
+  "author": "Chopra, Devereux and Lahiri", 
+  "year": 2021, 
+  "published": "Canadian Journal of Economics",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "epsilon",
+  "initial_value": 0.001,
+  "Code_type": "Matlab",
+  "Dynare_version": "0", 
+  "Model_type":2, 
+  "Features":{
+		"fiscal_policy": 0, 
+		"monetary_policy":0, 
+		"financial":0, 
+		"firm_exit":0, 
+		"multi_country":0, 
+		"heterogeneity":"H", 
+		"optimal_policy":0 
+  }, 
+
+  "variables": [ 
+			"Consumption",
+			"Labour",
+			"Output",
+			"Suseptible",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+}

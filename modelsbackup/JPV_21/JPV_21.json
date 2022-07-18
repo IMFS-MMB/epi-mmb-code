@@ -1,0 +1,33 @@
+{
+  "name": "JPV_21",
+  "author": "Jones, Philippon and Venkateswaran",
+  "title": "Optimal Mitigation Policies in a Pandemic: Social Distancing and Working from Home",
+  "year": 2021,
+  "publication": "Review of Financial Studies, Volume 34, Issue 11",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "ee_T_i",
+  "initial_value": 0.01,
+  "Code_type": "Dynare",
+  "Dynare_version": "4.6.1",
+  "Model_type":2, 
+  "Features":{
+		"fiscal_policy": 0, 
+		"monetary_policy": 0, 
+		"financial": 0, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 0, 
+		"optimal_policy": 1 
+  }, 
+
+  "variables": [ 
+			"Consumption",
+			"Labour",
+			"Output",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+}

@@ -1,0 +1,17 @@
+A_20: to be checked, Matlab
+AAL_20: code runs atm, Param, Xtime(1), Matlab
+ACS_21: Param, i_ini, Dynare
+AJRT_20: Param, I0in, Matlab
+BCG_21: to be checked, Matlab
+BKST_21: to be checked, Matlab
+CDL_21: to be checked, Matlab
+ERT_21_Ineq: Param, i_ini --> i_ini splits in: ih(week-start), is(week-start), Dynare
+ERT_21_NK: Param, i_ini, Dynare
+ERT_21_Test: Param, i_ini, Dynare
+GP_20: Param, eps (eps splits in young and old inf acc to share), Dynare
+HHK_20: to be checked, Matlab
+JPV_21: Param (loaded), ee_T_i, Dynare
+KUX_20: Shock, eps, Dynare
+LFA_21: Initval, i  (also part from s to r, why), Dynare
+R_20: to be checked, Matlab
+VDS_21: No, only full infe sequence, Dynare

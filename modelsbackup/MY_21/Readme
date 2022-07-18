@@ -1,0 +1,8 @@
+modelmasterscript.m:
+	1. load the pre-saved: sim_time_series.xlsx 
+                - this involves only 'modelmasterscript.m' and 'sim_time_series.xlsx'.
+        2. otherwise the result can be obtained by running 'master.m' which require par-pool (elasped time at least 6545.620549 seconds/ 110 mins!)
+                - in turns, all m files are relevant
+                - comment 'in' master.m; to run te=he entire simulation
+		- and change the directory to where 'sim_time_series.xlsx' is stored (_results/_simulations)
+			     

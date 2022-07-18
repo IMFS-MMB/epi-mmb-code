@@ -20,8 +20,6 @@ parameters
     rhof omega1 omega2 rhoa varphi1 varphi2 amean;
 
 load input ;
-load inf_ini
-ee_T_i(1)=helper;
 
 beta		= params(1) ;
 ec1			= params(2) ;
@@ -198,7 +196,6 @@ Va          = xinitial(26) ;
 abar        = xinitial(27) ;
 r           = 1 - xfinal(19) - xfinal(20) - xfinal(21);  //added by epi-mmb team
 
-%@# include "commonVarSS.mod" //added by epi-mmb team
 end ;
 
 shocks;

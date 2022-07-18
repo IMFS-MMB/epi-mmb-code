@@ -1,0 +1,34 @@
+{
+  "name": "VDS_21",
+  "author": "Vásconez, Damette and Shanafelt",
+  "title": "Macroepidemics and Unconventional Monetary Policy: Coupling Macroeconomics and Epidemiology in a Financial DSGE-SIR Framework",
+  "year": 2021,
+  "publication": "CEPR Covid Economics, Issue 67",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "I0",
+  "initial_value": 0.01,
+  "Code_type": "Dynare",
+  "Dynare_version": "4.6.4",
+  "Model_type":0, 
+  "Features":{
+		"fiscal_policy": 1, 
+		"monetary_policy": 1, 
+		"financial": 1, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 0, 
+		"optimal_policy": 0 
+  }, 
+
+  "variables": [ 
+			"Consumption",
+			"Labour",
+			"Output",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+
+}

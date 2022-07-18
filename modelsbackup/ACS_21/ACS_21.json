@@ -1,0 +1,34 @@
+{
+  "name": "ACS_21",
+  "author": "Ascari, Colciago and Silvestrini",
+  "title": "Business Dynamism, Sectoral Reallocation and Productivity in a Pandemic",
+  "year": 2021,
+  "publication": "Not published, CefES working paper No 482",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "i_ini",
+  "initial_value": 0.001,
+  "Code_type": "Dynare",
+  "Dynare_version": "4.6.4",
+  "Model_type": 2,
+  "Features":{
+		  "fiscal_policy": 0, 
+		  "monetary_policy": 1, 
+		  "financial": 0, 
+		  "firm_exit": 1, 
+		  "multi_country": 0, 
+		  "heterogeneity": "0", 
+		  "optimal_policy": 1 
+		},
+  "variables": [
+			"Consumption",
+			"Labour",
+			"Output",
+			"Deaths",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Interest",
+			"Inflation"
+			] 
+}

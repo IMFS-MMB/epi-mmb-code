@@ -1,0 +1,33 @@
+{
+  "name": "ERT_21_Epi",
+  "author": "Eichenbaum, Rebelo and Trabandt",
+  "title": "The Macroeconomics of Epidemics",
+  "year": 2021,
+  "publication": "The Review of Financial Studies, 34(11), 5149-5187",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "i_ini",
+  "initial_value": 0.001,
+  "Code_type": "Matlab",
+  "Dynare_version": "0",
+  "model_type":2, 
+  "features":{
+		"fiscal_policy": 1, 
+		"monetary_policy": 0, 
+		"financial": 0, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 0, 
+		"optimal_policy": 1 
+  }, 
+
+  "variables": [ 
+			"Consumption",
+			"Labour",
+			"Output",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+}
