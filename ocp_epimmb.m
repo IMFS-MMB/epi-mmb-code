@@ -65,29 +65,41 @@ if isfile('modelmasterscript.m')
     ress_load_ss=load('simulated_results_ss.mat');
     ress=nan(num_vars,size(ress_load.Susceptibles,1));
     ress_ss=nan(num_vars,1);
-    ress(1,:)=ress_load.Consumption;
-    ress(2,:)=ress_load.Deaths;
-    ress(3,:)=ress_load.Infected;           
-    ress(4,:)=ress_load.Labour;
-    ress(5,:)=ress_load.Output;
-    ress(6,:)=ress_load.Recovered;
-    ress(7,:)=ress_load.Susceptibles;
-    ress(8,:)=ress_load.Interest;
-    ress(9,:)=ress_load.Inflation;
-    ress(10,:)=ress_load.Investment;
-
-    ress_ss(1)=ress_load_ss.Consumption_ss;
-    ress_ss(2)=ress_load_ss.Deaths_ss;
-    ress_ss(3)=ress_load_ss.Infected_ss;
-    ress_ss(4)=ress_load_ss.Labour_ss;
-    ress_ss(5)=ress_load_ss.Output_ss;
-    ress_ss(6)=ress_load_ss.Recovered_ss;
-    ress_ss(7)=ress_load_ss.Susceptibles_ss;
-    ress_ss(8)=ress_load_ss.Interest_ss;
-    ress_ss(9)=ress_load_ss.Inflation_ss;
-    ress_ss(10)=ress_load_ss.Investment_ss;
-
     ressnames=fieldnames(ress_load); %sorted list including SS
+    ress_ssName = fieldnames(ress_load_ss);
+    
+      
+    % retriving results from .mat
+    for iii = 1:length(fieldnames(ress_load))
+        ressName_tmp = char(ressnames(iii));
+        eval(strcat("ress(iii,:) = ress_load." , ressName_tmp, ";"))
+        
+        ress_ssName_tmp = char(ress_ssName(iii));
+        eval(strcat("ress_ss(iii) = ress_load_ss." , ress_ssName_tmp, ";"))
+    end
+%     ress(1,:)=ress_load.Consumption;
+%     ress(2,:)=ress_load.Deaths;
+%     ress(3,:)=ress_load.Infected;           
+%     ress(4,:)=ress_load.Labour;
+%     ress(5,:)=ress_load.Output;
+%     ress(6,:)=ress_load.Recovered;
+%     ress(7,:)=ress_load.Susceptibles;
+%     ress(8,:)=ress_load.Interest;
+%     ress(9,:)=ress_load.Inflation;
+%     ress(10,:)=ress_load.Investment;
+% 
+%     ress_ss(1)=ress_load_ss.Consumption_ss;
+%     ress_ss(2)=ress_load_ss.Deaths_ss;
+%     ress_ss(3)=ress_load_ss.Infected_ss;
+%     ress_ss(4)=ress_load_ss.Labour_ss;
+%     ress_ss(5)=ress_load_ss.Output_ss;
+%     ress_ss(6)=ress_load_ss.Recovered_ss;
+%     ress_ss(7)=ress_load_ss.Susceptibles_ss;
+%     ress_ss(8)=ress_load_ss.Interest_ss;
+%     ress_ss(9)=ress_load_ss.Inflation_ss;
+%     ress_ss(10)=ress_load_ss.Investment_ss;
+
+
 else
     eval(strcat("dynare ", modelname))
     load simulated_results
@@ -170,13 +182,13 @@ elseif jcode.Code_type=="Matlab"
     for ind_macrovar = 1: num_macrovar
         macrovar = macrovariablelist(ind_macrovar);
         series_pos = find(strcmp(ressnames,macrovar));
-
+        ss_pos = find(strcmp(ress_ssName,strcat(macrovar,"_ss")));
         result_mat(ind_macrovar,:) = nan(1,maxhorizon);
 
         if length(series_pos) > 0
             %S.(F{idx})
             series_level = ress(series_pos,:);
-            series_ss = ress_ss(series_pos);
+            series_ss = ress_ss(ss_pos);
             
             if exist('series_ss','var') == 1
                 if series_ss == 0;
@@ -204,6 +216,8 @@ elseif jcode.Code_type=="Matlab"
                     result_mat(ind_macrovar,:) = series(1:maxhorizon);
                 end
             end
+        else
+            result_mat(ind_macrovar,:) = nan(1:maxhorizon);
         end
 
     end    
