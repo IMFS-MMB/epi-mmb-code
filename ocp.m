@@ -39,8 +39,8 @@ shocks(3,:)=[1 0.001 ]; %medium
 shocks(4,:)=[1 0.0025]; %large
 %list_models = { 'JPV_21' }
 shocklist={'Model-specific Initial Infections','Low Initial Infections','Medium Initial Infections','High Initial Infections'};
-macrovariablelist = unionvariable(list_models,savepath);
-%macrovariablelist = ["Consumption","Labour","Output","Susceptibles","Infected","Recovered","Deaths","Interest","Inflation","Investment"]; % list is put as an array to prepare future generation from json files
+%macrovariablelist = unionvariable(list_models,savepath);
+macrovariablelist = ["Consumption","Labour","Output","Susceptibles","Infected","Recovered","Deaths","Interest","Inflation","Investment"]; % list is put as an array to prepare future generation from json files
 for index_m=1:size(list_models,2)
     modelname=list_models{index_m};
     if modelname == "CCGPRV_21"| modelname =="F_21"| modelname =="VDS_21" | modelname =="MY_21"; % Model with only model specified shock
