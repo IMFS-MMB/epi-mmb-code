@@ -32,7 +32,7 @@ tauF lambtildeF lamtauF lamiF lamsF lamrF ddF popF RbF pieF
 mcF FF KfF rrF dcsF dnsF dciF dniF dwF dlamsF dlamtauF 
 dlambtildeF dlamiF dlamrF dcrF dnrF drkF dFF dKfF pbreveF dpieF;  
 @#include "commonVar.mod"    // added by epi-mmb team 
-var Interest Inflation;
+var Interest Inflation Investment;
 
 
 parameters 
@@ -446,6 +446,7 @@ drkF=rkF/rkF(-1);
 @# include "commonVarEq.mod"  // added by epi-mmb team
 Interest=Rb;
 Inflation=pie;
+Investment=x;
 end; 
 
 
@@ -549,6 +550,7 @@ dpieF=1;
 @# include "commonVarSS.mod" //added by epi-mmb team
 Interest=Rb_ss;
 Inflation=pie_ss;
+Investment=x_ss;
 end;
 
 //calculate residuals of dynamic equations with provided steady state
