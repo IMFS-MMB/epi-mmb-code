@@ -8,7 +8,8 @@ end
 ppp.path.root = convertCharsToStrings(pwd);
 ppp.path.working = fullfile(ppp.path.root, "working");
 ppp.path.share.dyModules =  fullfile(ppp.path.root, "shared", "dyModules") ;
-num_vars=10;
+%num_vars=10;
+num_vars = length(macrovariablelist);
 try
     rmdir(ppp.path.working,'s')
 end
@@ -217,7 +218,7 @@ elseif jcode.Code_type=="Matlab"
                 end
             end
         else
-            result_mat(ind_macrovar,:) = nan(1:maxhorizon);
+            result_mat(ind_macrovar,:) = nan(1,maxhorizon);
         end
 
     end    
