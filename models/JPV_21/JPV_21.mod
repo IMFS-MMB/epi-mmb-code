@@ -198,7 +198,6 @@ Va          = xinitial(26) ;
 abar        = xinitial(27) ;
 r           = 1 - xfinal(19) - xfinal(20) - xfinal(21);  //added by epi-mmb team
 
-%@# include "commonVarSS.mod" //added by epi-mmb team
 end ;
 
 shocks;
