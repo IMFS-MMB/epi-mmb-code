@@ -47,6 +47,7 @@ var         n           (long_name = 'Labor supply')
                 c@{k} 
                 c@{k}_dev
             @#endfor
+            Interest Inflation Investment
             ;
 @#include "commonVar.mod"    // added by epi-mmb team
 
@@ -129,6 +130,9 @@ dD          = 0;
     c@{k}_dev = 0;
 @#endfor
 @# include "commonVarSS.mod" //added by epi-mmb team
+Interest=0;
+Inflation=0;
+Investment=0;
 end;
 
 steady;
