@@ -6,3 +6,7 @@ Susceptibles = fy + fo ;
 Infected = 0 + 0;
 Recovered = 0 + 0;
 Deaths = 0 + 0; 
+
+Inflation = 0;
+Interest= 0;
+Investment= 0;

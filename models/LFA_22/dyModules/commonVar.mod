@@ -1,1 +1,1 @@
-var Consumption Labour Output  Susceptibles Infected Recovered Deaths Inflation Interest  ;
+var Consumption Labour Output  Susceptibles Infected Recovered Deaths Inflation Interest Investment ;

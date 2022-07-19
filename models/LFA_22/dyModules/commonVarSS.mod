@@ -8,3 +8,4 @@ Susceptibles = s;
 Infected = i;
 Recovered = r;
 Deaths =d;
+Investment=0;

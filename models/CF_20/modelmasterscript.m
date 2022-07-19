@@ -30,9 +30,18 @@ Consumption_ss = dtparam.values(dtparam.name == "c_rss");
 Labour_ss = dtparam.values(dtparam.name == "hours_rss");
 Output_ss = 10*dtparam.values(dtparam.name == "hours_rss");
 
+Inflation= NaN(size(Susceptibles));
+Interest= NaN(size(Susceptibles));
+Investment = NaN(size(Susceptibles));
+
+
 Susceptibles_ss= 0;
 Infected_ss= 0;
 Recovered_ss= 0;
 Deaths_ss= 0;
-save('simulated_results.mat','Consumption','Labour','Output','Deaths','Susceptibles','Infected','Recovered');
-save('simulated_results_ss.mat','Consumption_ss','Labour_ss','Output_ss','Deaths_ss','Susceptibles_ss','Infected_ss','Recovered_ss');%,'Exposed'
+Inflation_ss= 0;
+Interest_ss= 0;
+Investment_ss = 0;
+
+save('simulated_results.mat','Consumption','Labour','Output','Deaths','Susceptibles','Infected','Recovered','Interest','Inflation','Investment');
+save('simulated_results_ss.mat','Consumption_ss','Labour_ss','Output_ss','Deaths_ss','Susceptibles_ss','Infected_ss','Recovered_ss','Interest_ss','Inflation_ss','Investment_ss');%,'Exposed'

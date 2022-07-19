@@ -24,7 +24,7 @@
   "variables": [ 
 			"Susceptibles",
 			"Infected",
-			"Recovered",
-			"Deaths"
+			"Recovered"
+			
 			]
 }

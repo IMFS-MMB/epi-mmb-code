@@ -404,7 +404,9 @@ Susceptibles=day2week(Susceptibles_day);
 Infected=day2week(Infected_day);
 Recovered=day2week(Recovered_day);
 Deaths=day2week(Deaths_day);
-
+Interest=NaN(size(Susceptibles));
+Inflation=NaN(size(Susceptibles));
+Investment=NaN(size(Susceptibles));
 
 Consumption_ss= w;
 Labour_ss= 1;
@@ -413,6 +415,9 @@ Susceptibles_ss=0;
 Infected_ss=0;
 Recovered_ss=0;
 Deaths_ss=0;
+Interest_ss=0;
+Inflation_ss=0;
+Investment_ss=0;
 %save results!
-save('simulated_results.mat','Consumption','Labour','Output','Susceptibles','Infected','Recovered','Deaths');
-save('simulated_results_ss.mat','Consumption_ss','Labour_ss','Output_ss','Deaths_ss','Susceptibles_ss','Infected_ss','Recovered_ss');
+save('simulated_results.mat','Consumption','Labour','Output','Susceptibles','Infected','Recovered','Deaths','Interest','Inflation','Investment');
+save('simulated_results_ss.mat','Consumption_ss','Labour_ss','Output_ss','Deaths_ss','Susceptibles_ss','Infected_ss','Recovered_ss','Interest_ss','Inflation_ss','Investment_ss');

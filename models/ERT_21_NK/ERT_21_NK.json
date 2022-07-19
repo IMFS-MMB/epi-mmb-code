@@ -29,6 +29,7 @@
 			"Infected",
 			"Recovered",
 			"Interest",
-			"Inflation"
+			"Inflation",
+	  		"Investment"
 			] 
 }
