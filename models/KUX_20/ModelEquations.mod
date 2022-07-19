@@ -51,4 +51,7 @@ C = (S * c + (I + R) * A / sqrt(theta))/(A/sqrt(theta)) - 1;
 N = (S * n + (I + R) * 1 / sqrt(theta))/(1/sqrt(theta)) - 1;
 
 @# include "commonVarEq.mod"  // added by epi-mmb team
+Interest=0;
+Investment=0;
+Inflation=0;
 end;
