@@ -23,7 +23,7 @@ Ne2 stilde Y tt ss ii dd rr no1 no2 GDP dC1 dls dLd dw dmutilde
 dlambda dlambdai dlambdad dC de1 de2 dpi df1 df2 dzc1 dzc2 
 dlambdat dfe1 dfe2 Ztilde harm_av omega;
 var Consumption Labour Output Susceptibles Infected Recovered Deaths;     // added by epi-mmb team
-var Interest Inflation;
+var Interest Inflation Investment;
 
 
 %----------------------------------------------------------------
@@ -394,6 +394,7 @@ Recovered = rr;
 Deaths = dd; 
 Interest=R;
 Inflation=pi;
+Investment=0;
 end;
 
 
@@ -472,6 +473,7 @@ Recovered = Recovered_ss;
 Deaths = Deaths_ss;
 Interest=Rbar;
 Inflation=pibar;
+Investment=0;
 end;
 
 //calculate residuals of dynamic equations with provided steady state
