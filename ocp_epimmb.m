@@ -117,11 +117,15 @@ if jcode.Code_type=="Dynare"
 
             if modelname=="LFA_22"
                   if series_ss == 0 
-                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths"| macrovar=="Interest"| macrovar=="Inflation";
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
                         series = 100*series_level;
                     else
+                        if  macrovar=="Interest"| macrovar=="Inflation";
+                        series = 100*(series_level- series_ss);
+                        else
                         series = 100*series_level;
                     end
+                    end 
                     if series==zeros(1,length(series))
                         series=nan(1,length(series));
                     end
@@ -131,10 +135,14 @@ if jcode.Code_type=="Dynare"
                     result_mat(ind_macrovar,1:(maxhorizon-1)) = series(2:maxhorizon);
 
                   else
-                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths"| macrovar=="Interest"| macrovar=="Inflation";
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
                         series = 100*series_level;
                     else
+                        if  macrovar=="Interest"| macrovar=="Inflation";
+                        series = 100*(series_level- series_ss);
+                        else
                     series = 100*(series_level - series_ss)/series_ss;
+                    end
                     end
                     if series==zeros(1,length(series))
                         series=nan(1,length(series));
@@ -146,11 +154,15 @@ if jcode.Code_type=="Dynare"
                 end
             else
                 if series_ss == 0 
-                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths"| macrovar=="Interest"| macrovar=="Inflation";
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
                         series = 100*series_level;
                     else
+                        if  macrovar=="Interest"| macrovar=="Inflation";
+                        series = 100*(series_level- series_ss);
+                        else
                         series = 100* series_level;
-                    end   
+                        end
+                    end
                     if series==zeros(1,length(series))
                         series=nan(1,length(series));
                     end
@@ -160,10 +172,14 @@ if jcode.Code_type=="Dynare"
                     result_mat(ind_macrovar,:) = series(1:maxhorizon);
 
                 else
-                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths"| macrovar=="Interest"| macrovar=="Inflation";
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
                         series = 100*series_level;
                     else
+                        if  macrovar=="Interest"| macrovar=="Inflation";
+                        series = 100*(series_level- series_ss);
+                        else
                     series = 100*(series_level - series_ss)/series_ss;
+                        end
                     end
                     if series==zeros(1,length(series))
                         series=nan(1,length(series));
@@ -193,10 +209,14 @@ elseif jcode.Code_type=="Matlab"
             
             if exist('series_ss','var') == 1
                 if series_ss == 0;
-                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths"| macrovar=="Interest"| macrovar=="Inflation";
+                    if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
                         series = 100*series_level;
                     else
+                        if  macrovar=="Interest"| macrovar=="Inflation";
+                        series = 100*(series_level- series_ss);
+                        else
                         series = 100* series_level;
+                        end
                     end
                     if series==zeros(1,length(series))
                         series=nan(1,length(series));
@@ -207,6 +227,9 @@ elseif jcode.Code_type=="Matlab"
                     result_mat(ind_macrovar,:) = series(1:maxhorizon);
 
                 else
+                    if  macrovar=="Interest"| macrovar=="Inflation";
+                        series = 100*(series_level- series_ss);
+                        else
                     series = 100*(series_level - series_ss)/series_ss;
                     if series==zeros(1,length(series))
                         series=nan(1,length(series));
@@ -215,6 +238,8 @@ elseif jcode.Code_type=="Matlab"
                         series(end+1:maxhorizon)=nan;
                     end                    
                     result_mat(ind_macrovar,:) = series(1:maxhorizon);
+                    end
+
                 end
             end
         else
