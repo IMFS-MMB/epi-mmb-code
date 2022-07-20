@@ -392,8 +392,8 @@ Susceptibles = ss;
 Infected = ii;
 Recovered = rr;
 Deaths = dd; 
-Interest=R-1;
-Inflation=pi-1;
+Interest=R;
+Inflation=pi;
 Investment=0;
 end;
 
@@ -471,8 +471,8 @@ Susceptibles = Susceptibles_ss;
 Infected = Infected_ss;
 Recovered = Recovered_ss;
 Deaths = Deaths_ss;
-Interest=Rbar-1;
-Inflation=pibar-1;
+Interest=Rbar;
+Inflation=pibar;
 Investment=0;
 end;
 

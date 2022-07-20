@@ -29,7 +29,7 @@ Labour_ss=0;
 name='PHICPI_EA';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
 %Inflation_q=(z(2:end)-zss); 
-Inflation_q=(z(2:end)-1); 
+Inflation_q=(exp(z(2:end))-exp(zss)); 
 Inflation=repelem(Inflation_q,12);
 Inflation_ss=0; 
 
@@ -42,7 +42,7 @@ Investment_ss=0;
 name='INOM_EA';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
 %Interest_q=4*(z(2:end)-zss); 
-Interest_q=(z(2:end)); 
+Interest_q=(exp(z(2:end))-exp(zss)); 
 Interest=repelem(Interest_q,12);
 Interest_ss=0;
 

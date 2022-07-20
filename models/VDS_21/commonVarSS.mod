@@ -2,7 +2,7 @@
 Consumption = C;
 Labour = L;
 Output = Y;
-Inflation = Pi-1;
+Inflation = Pi;
 Interest = i;
 % Susceptibles = s;
 % Infected = Itilde;
