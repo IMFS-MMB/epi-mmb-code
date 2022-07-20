@@ -444,8 +444,8 @@ dcrF=crF/crF(-1);
 dnrF=nrF/nrF(-1);
 drkF=rkF/rkF(-1);
 @# include "commonVarEq.mod"  // added by epi-mmb team
-Interest=Rb;
-Inflation=pie;
+Interest=Rb-1;
+Inflation=pie-1;
 Investment=x;
 end; 
 
@@ -548,8 +548,8 @@ dKfF=1;
 pbreveF=1; 
 dpieF=1;
 @# include "commonVarSS.mod" //added by epi-mmb team
-Interest=Rb_ss;
-Inflation=pie_ss;
+Interest=Rb_ss-1;
+Inflation=pie_ss-1;
 Investment=x_ss;
 end;
 

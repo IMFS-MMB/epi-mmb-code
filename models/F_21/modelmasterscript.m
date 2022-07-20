@@ -15,9 +15,9 @@ Labour = repelem(exp(irf_store.nopol(strmatch('N_a', M_.endo_names, 'exact'),2:e
 Output_quarterly = exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),2:end)); 
 Output = repelem(exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),2:end)),12)'; 
 Inflation_quarterly = exp(irf_store.nopol(strmatch('Pi', M_.endo_names, 'exact'),2:end)); 
-Inflation = repelem(exp(irf_store.nopol(strmatch('Pi', M_.endo_names, 'exact'),2:end)),12)'; 
+Inflation = repelem(exp(irf_store.nopol(strmatch('Pi', M_.endo_names, 'exact'),2:end))-1,12)'; 
 Interest_quarterly = exp(irf_store.nopol(strmatch('R', M_.endo_names, 'exact'),2:end)); 
-Interest = repelem(exp(irf_store.nopol(strmatch('R', M_.endo_names, 'exact'),2:end)),12)'; 
+Interest = repelem(exp(irf_store.nopol(strmatch('R', M_.endo_names, 'exact'),2:end))-1,12)'; 
 
 
 Susceptibles = nan(size(Consumption));
@@ -29,8 +29,10 @@ Investment =  nan(size(Consumption));
 Consumption_ss = par.chi*detss.Cb+(1-par.chi)*detss.Cs; 
 Labour_ss = detss.N_a + detss.N_n; 
 Output_ss= detss.GDP; 
-Inflation_ss= detss.Pi; 
-Interest_ss= detss.R; 
+Inflation_ss= 0; 
+Interest_ss= 0; 
+%Inflation_ss= detss.Pi; 
+%Interest_ss= detss.R; 
 Investment_ss=nan; 
 Deaths_ss = nan;
 Infected_ss= nan;
