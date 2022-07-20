@@ -26,7 +26,7 @@ Labour_q=(z(2:end)-zss);
 Labour=repelem(Labour_q,12);
 Labour_ss=0; 
 
-name='PHICVAT_EA';
+name='PHICPI_EA';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
 %Inflation_q=(z(2:end)-zss); 
 Inflation_q=(z(2:end)-1); 
