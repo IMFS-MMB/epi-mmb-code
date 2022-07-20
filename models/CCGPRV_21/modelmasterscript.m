@@ -42,7 +42,7 @@ Investment_ss=0;
 name='INOM_EA';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
 %Interest_q=4*(z(2:end)-zss); 
-Interest_q=4*(z(2:end)); 
+Interest_q=(z(2:end)); 
 Interest=repelem(Interest_q,12);
 Interest_ss=0;
 
