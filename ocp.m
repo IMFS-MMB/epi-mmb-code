@@ -37,7 +37,7 @@ shocks(1,:)=[0 0]; %model specific
 shocks(2,:)=[1 0.0005]; %low
 shocks(3,:)=[1 0.001 ]; %medium
 shocks(4,:)=[1 0.0025]; %large
-%list_models = { 'JPV_21' }
+list_models = { 'F_21' }
 shocklist={'Model-specific Initial Infections','Low Initial Infections','Medium Initial Infections','High Initial Infections'};
 %macrovariablelist = unionvariable(list_models,savepath);
 macrovariablelist = ["Consumption","Labour","Output","Susceptibles","Infected","Recovered","Deaths","Interest","Inflation","Investment"]; % list is put as an array to prepare future generation from json files
@@ -80,6 +80,8 @@ for index_m=1:size(list_models,2)
                 new_string = strrep(json_print, ',', ',\n');
                 % add a return character after curly brackets:
                 new_string = strrep(new_string, '{', '{\n');
+                new_string = strrep(new_string,'Interest','Nominal Interest Rate');
+
                 fid=fopen(json_filename,'w'); 
                 fprintf(fid, new_string); 
                 fclose('all'); 
@@ -118,6 +120,8 @@ for index_m=1:size(list_models,2)
                 new_string = strrep(json_print, ',', ',\n');
                 % add a return character after curly brackets:
                 new_string = strrep(new_string, '{', '{\n');
+                new_string = strrep(new_string,'Interest','Nominal Interest Rate');
+
                 fid=fopen(json_filename,'w'); 
                 fprintf(fid, new_string); 
                 fclose('all'); 
@@ -160,6 +164,8 @@ for index_m=1:size(list_models,2)
             new_string = strrep(json_print, ',', ',\n');
             % add a return character after curly brackets:
             new_string = strrep(new_string, '{', '{\n');
+            new_string = strrep(new_string,'Interest','Nominal Interest Rate');
+
             fid=fopen(json_filename,'w'); 
             fprintf(fid, new_string); 
             fclose('all'); 
