@@ -101,10 +101,14 @@ if isfile('modelmasterscript.m')
 %     ress_ss(10)=ress_load_ss.Investment_ss;
 
 
+elseif modelname=="BKM_22"
+    eval(strcat("dynare ", modelname, " nostrict"))
+    load simulated_results
 else
-    eval(strcat("dynare ", modelname))
+     eval(strcat("dynare ", modelname))
     load simulated_results
 end
+
 
 disp("results")
 if jcode.Code_type=="Dynare"
