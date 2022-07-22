@@ -25,7 +25,7 @@ var S I R D T Pop
     ;
 @#include "commonVar.mod"    // added by epi-mmb team
 
-varexo eps_tauc_s eps_tauc_i eps_tauc_r eps_taun_s eps_taun_i eps_taun_r  eps_RR GAP eps_lock;
+varexo eps_tauc_s eps_tauc_i eps_tauc_r eps_taun_s eps_taun_i eps_taun_r  eps_RR GAP ;%eps_lock
 
 parameters pis1 pis2 pis3 pid_mt pir_mt lim 
             kappa rho piT 
