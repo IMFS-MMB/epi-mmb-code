@@ -6,8 +6,8 @@ Output = y;
 Inflation = pic; 
 Interest = RR;
 Susceptibles = S;
-Infected = I;
-Recovered = R;
+Infected = I+IA;
+Recovered = R+RA;
 Deaths = D;
 
 // ================
