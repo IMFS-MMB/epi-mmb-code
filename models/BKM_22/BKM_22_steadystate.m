@@ -73,10 +73,10 @@ Labour = n;
 Output = y;
 Inflation = pic; 
 Interest = RR;
-Susceptibles = S;
-Infected = I;
-Recovered = R;
-Deaths = D;
+Susceptibles = 1;
+Infected = 0;
+Recovered = 0;
+Deaths = 0;
 
 
 %U_s = (c_s^(1-sigmac)/(1-sigmac) - thet*n_s^(1+sigman)/(1+sigman))/(1-bet);
