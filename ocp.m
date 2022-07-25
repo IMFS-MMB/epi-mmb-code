@@ -43,7 +43,7 @@ shocklist={'Model-specific Initial Infections','Low Initial Infections','Medium 
 macrovariablelist = ["Consumption","Labour","Output","Susceptibles","Infected","Recovered","Deaths","Interest","Inflation","Investment"]; % list is put as an array to prepare future generation from json files
 for index_m=1:size(list_models,2)
     modelname=list_models{index_m};
-    if modelname == "CCGPRV_21"| modelname =="F_21"| modelname =="VDS_21" | modelname =="MY_21"; % Model with only model specified shock
+    if modelname == "CCGPRV_21"| modelname =="F_21"| modelname =="VDS_21" | modelname =="MY_21" | modelname=="CF_20"; % Model with only model specified shock
         for index_s=1:size(shocks,1)
             if index_s == 1
                 modelname=list_models{index_m};
