@@ -2,27 +2,29 @@ dynare VDS_21;
 load simulated_results_base;
 name = 'Consumption';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
-Consumption = z;
+
+Consumption = repelem(z,12);
 Consumption_ss = zss;
 name = 'Labour';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
-Labour = z;
+Labour = repelem(z,12);
 Labour_ss = zss;
 name = 'Output';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
-Output = z;
+Output = repelem(z,12);
 Output_ss = zss; 
 name = 'Interest';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
-Interest = z;
+Interest = repelem(z,12);
 Interest_ss = zss; 
 name = 'Inflation';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
-Inflation = z;
+Inflation = repelem(z,12);
 Inflation_ss = zss; 
 name = 'In';
 [z,zss]=dyn2vec(M_, oo_, options_,name);
-Investment = z;
+Investment = repelem(z,12);
+
 Investment_ss = zss; 
 
 

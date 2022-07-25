@@ -1,0 +1,128 @@
+Starting Dynare (version 5.1).
+Calling Dynare with arguments: nostrict
+Starting preprocessing of the model file ...
+WARNING: eps_lock not used in model block, removed by nostrict command-line option
+Found 65 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+n_i   =     2.169109 ; 
+U_dd =   -11547.949725; 
+MODEL_DIAGNOSTICS: The steady state cannot be computed
+n_i   =     2.169109 ; 
+U_dd =   -11547.949725; 
+MODEL_DIAGNOSTICS: The steady state cannot be computed
+n_i   =     2.169109 ; 
+U_dd =   -11547.949725; 
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 4.9824, 	 time = 0.127
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 736)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',736,0)">line 736</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 2,	 err. = 1.2881, 	 time = 0.016
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 736)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',736,0)">line 736</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 3,	 err. = 0.034984, 	 time = 0
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 736)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',736,0)">line 736</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 4,	 err. = 0.00093414, 	 time = 0
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 736)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',736,0)">line 736</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 5,	 err. = 2.122e-08, 	 time = 0.014
+
+Total time of simulation: 0.473
+--------------------------------------------------------
+
+Perfect foresight solution found.
+
+n_i   =     2.169109 ; 
+U_dd =   -11547.949725; 
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 4.9824, 	 time = 0.012
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 755)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',755,0)">line 755</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 2,	 err. = 1.2187, 	 time = 0.01
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 755)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',755,0)">line 755</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 3,	 err. = 0.029205, 	 time = 0.01
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 755)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',755,0)">line 755</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 4,	 err. = 0.00079951, 	 time = 0.01
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 755)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',755,0)">line 755</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 5,	 err. = 1.4111e-08, 	 time = 0.011
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 232)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',232,0)">line 232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m', 161)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\sim1.m',161,0)">line 161</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 100)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',100,0)">line 100</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m', 63)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\perfect-foresight-models\perfect_foresight_solver.m',63,0)">line 63</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('BKM_22.driver', 'Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m', 755)" style="font-weight:bold">BKM_22.driver</a> (<a href="matlab: opentoline('Z:\Documents\Epi-MMB\BKM_22\OCP\+BKM_22\driver.m',755,0)">line 755</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.1\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.1\matlab\dynare.m',281,0)">line 281</a>)
+] 
+Iter: 6,	 err. = 4.5475e-13, 	 time = 0.01
+
+Total time of simulation: 0.388
+--------------------------------------------------------
+
+Perfect foresight solution found.
+
+Total computing time : 0h00m02s
+Note: 1 warning(s) encountered in the preprocessor
+Note: warning(s) encountered in MATLAB/Octave code

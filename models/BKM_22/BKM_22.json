@@ -1,0 +1,36 @@
+
+{
+  "name": "BKM_22",
+  "author": "Brzoza-Brzezine, Kolasa and Makarski",
+  "title": "Monetary Policy and COVID-19",
+  "year": 2022,
+  "publication": "International Journal of Central Banking 18(1), 41-80",
+  "variabledim": 1,
+  "initial_type": "Initval",
+  "initial_name": "i_ini",
+  "initial_value": 0.001,
+  "Code_type": "Dynare",
+  "Dynare_version": "5.1",
+  "Model_type":2, 
+  "Features":{
+		"fiscal_policy": 0, 
+		"monetary_policy": 1, 
+		"financial": 0, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 0, 
+		"optimal_policy": 1 
+  }, 
+
+  "variables": [ 
+			"Consumption",
+			"Labour",
+			"Output",
+            "Inflation",
+            "Interest",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+}
