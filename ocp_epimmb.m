@@ -116,7 +116,9 @@ if jcode.Code_type=="Dynare"
             series_ss = results.oo_.steady_state(series_pos,:);
 
             if modelname=="LFA_22"
+
                   if series_ss == 0                  
+                  
                         series = 100*series_level;
                    
                     if series==zeros(1,length(series))
@@ -128,7 +130,10 @@ if jcode.Code_type=="Dynare"
                     result_mat(ind_macrovar,1:(maxhorizon-1)) = series(2:maxhorizon);
 
                   else
+
                     if macrovar=="Susceptibles"| macrovar=="Infected"| macrovar=="Recovered"| macrovar=="Deaths";
+
+                    
                         series = 100*series_level;
                     else
                         if  macrovar=="Interest"| macrovar=="Inflation";
