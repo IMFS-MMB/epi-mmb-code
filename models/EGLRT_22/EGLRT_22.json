@@ -1,0 +1,30 @@
+{
+  "name": "EGLRT_22",
+  "title": "Expectations, Infections, and Economic Activity",
+  "author": "Eichenbaum, Godinho de Matos, Lima, Rebelo, Trabandt", 
+  "year": 2022, 
+  "published": "Working Paper",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "par.i_ini",
+  "initial_value": 0.0009,
+  "Code_type": "Matlab",
+  "Dynare_version": "0", 
+  "model_type":2, 
+  "features":{
+		"fiscal_policy": 0, 
+		"monetary_policy":0, 
+		"financial":0, 
+		"firm_exit":0, 
+		"multi_country":0, 
+		"heterogeneity":0, 
+		"optimal_policy":0 
+  }, 
+  "variables": [ 
+			"Consumption",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]	
+}
