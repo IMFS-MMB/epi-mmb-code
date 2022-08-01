@@ -5,7 +5,7 @@
 
 %Baseline estimated model
 
-close all; clear all; clc;
+close all;  clc; %clear all;
 
 rng('default');
 

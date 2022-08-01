@@ -1,7 +1,8 @@
 young_old 
 
 Consumption_month= par.sy_ss*cons_monthly.Cy.Consy+(1- par.sy_ss)*cons_monthly.Co.Conso; 
-Consumption=repelem(Consumption_month,4);
+Consumption=repelem(Consumption_month,4)
+Consumption(59:end)=[];
 Consumption_ss=0; 
 
 Infected= par.sy_ss*Iy+(1-par.sy_ss)*Io; 
