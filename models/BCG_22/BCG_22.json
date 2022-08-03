@@ -1,9 +1,9 @@
 {
-  "name": "BCG_21",
+  "name": "BCG_22",
   "author": "Bodenstein, Corsetti and Guerrieri",
   "title": "Social Distancing and Supply Disruptions in a Pandemic",
-  "year": 2021,
-  "publication": "Computation Economics, forthcoming",
+  "year": 2022,
+  "publication": "Quantitative Economics, Volume 13, Issue 2",
   "variabledim": 1,
   "initial_type": "Param",
   "initial_name": "I0in",
