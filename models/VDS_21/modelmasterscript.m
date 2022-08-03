@@ -29,9 +29,9 @@ Investment_ss = zss;
 
 
 load SIR;
-Susceptibles = Y_SIR_eu(:,1);
-Infected = Y_SIR_eu(:,2); 
-Recovered =  Y_SIR_eu(:,3);
+Susceptibles = repelem(Y_SIR_eu(:,1),12);
+Infected = repelem(Y_SIR_eu(:,2),12); 
+Recovered =  repelem(Y_SIR_eu(:,3),12);
 Deaths = NaN(length(Susceptibles),1);
 Deaths_ss = 0;
 Susceptibles_ss = 0;
