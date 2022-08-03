@@ -1,9 +1,9 @@
 {
-  "name": "ERT_21_NK",
+  "name": "ERT_22_NK",
   "author": "Eichenbaum, Rebelo and Trabandt",
   "title": "Epidemics in the New Keynesian Model",
-  "year": 2021,
-  "publication": "Journal of Economic Dynamics and Control (forthcoming)",
+  "year": 2022,
+  "publication": "Journal of Economic Dynamics and Control, Vol. 140",
   "variabledim": 1,
   "initial_type": "Param",
   "initial_name": "i_ini",

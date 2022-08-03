@@ -1,9 +1,9 @@
 {
-  "name": "ERT_21_Test",
+  "name": "ERT_22_Test",
   "author": "Eichenbaum, Rebelo and Trabandt",
   "title": "The Macroeconomics of Testing and Quarantining",
-  "year": 2021,
-  "publication": "Journal of Economic Dynamics and Control (forthcoming)",
+  "year": 2022,
+  "publication": "Journal of Economic Dynamics and Control, Vol. 138",
   "variabledim": 1,
   "initial_type": "Param",
   "initial_name": "i_ini",

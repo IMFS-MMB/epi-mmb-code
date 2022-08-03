@@ -1,9 +1,9 @@
 {
-  "name": "ERT_21_Ineq",
+  "name": "ERT_22_Ineq",
   "author": "Eichenbaum, Rebelo and Trabandt",
   "title": "Inequality in Life and Death",
-  "year": 2021,
-  "publication": "IMF Economic Review, 2022",
+  "year": 2022,
+  "publication": "IMF Economic Review, 70, pp. 68-104 (2022)",
   "variabledim": 1,
   "initial_type": "Param",
   "initial_name": "i_ini",
