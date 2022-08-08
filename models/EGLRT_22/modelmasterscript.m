@@ -5,7 +5,7 @@ Consumption=repelem(Consumption_month,4);
 Consumption(59:end)=[];
 Consumption_ss=0; 
 
-Infected= Iy+(1-par.sy_ss)*Io; 
+Infected= Iy+Io; 
 Infected_ss=0; 
 
 Susceptibles=Sy+So; 
