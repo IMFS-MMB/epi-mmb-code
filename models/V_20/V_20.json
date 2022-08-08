@@ -18,7 +18,7 @@
 		"firm_exit": 0, 
 		"multi_country": 0, 
 		"heterogeneity": "H", 
-		"optimal_policy": 0 
+		"optimal_policy": 1 
   }, 
 
   "variables": [ 
