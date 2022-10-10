@@ -139,7 +139,7 @@ if jcode.Code_type=="Dynare"
                         if  macrovar=="Interest"| macrovar=="Inflation";
                         series = 100*(series_level- series_ss);
                         else
-                        series = 100*(series_level - series_ss)/series_ss;
+                        series = 100*(series_level - series_ss);
                         end
                     end
                     if series==zeros(1,length(series))
@@ -169,7 +169,7 @@ if jcode.Code_type=="Dynare"
                         if  macrovar=="Interest"| macrovar=="Inflation";
                         series = 100*(series_level- series_ss);
                         else
-                        series = 100*(series_level - series_ss)/series_ss;
+                        series = 100*(series_level - series_ss);
                         end
                     end
                     if series==zeros(1,length(series))
@@ -215,7 +215,7 @@ elseif jcode.Code_type=="Matlab"
                     if  macrovar=="Interest"| macrovar=="Inflation";
                         series = 100*(series_level- series_ss);
                     else
-                        series = 100*(series_level - series_ss)/series_ss;
+                        series = 100*(series_level - series_ss);
                     end   
                     if series==zeros(1,length(series))
                         series=nan(1,length(series));
