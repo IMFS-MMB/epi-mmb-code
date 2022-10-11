@@ -15,9 +15,9 @@ Labour = repelem(exp(irf_store.nopol(strmatch('N_a', M_.endo_names, 'exact'),2:e
 Output_quarterly = exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),2:end)); 
 Output = repelem(exp(irf_store.nopol(strmatch('GDP', M_.endo_names, 'exact'),2:end)),12)'; 
 Inflation_quarterly = exp(irf_store.nopol(strmatch('Pi', M_.endo_names, 'exact'),2:end)); 
-Inflation = repelem(exp(irf_store.nopol(strmatch('Pi', M_.endo_names, 'exact'),2:end))^4,12)'; 
+Inflation = repelem(exp(irf_store.nopol(strmatch('Pi', M_.endo_names, 'exact'),2:end)).^4,12)'; 
 Interest_quarterly = exp(irf_store.nopol(strmatch('R', M_.endo_names, 'exact'),2:end)); 
-Interest = repelem(exp(irf_store.nopol(strmatch('R', M_.endo_names, 'exact'),2:end))^4,12)'; 
+Interest = repelem(exp(irf_store.nopol(strmatch('R', M_.endo_names, 'exact'),2:end)).^4,12)'; 
 
 
 Susceptibles = nan(size(Consumption));
