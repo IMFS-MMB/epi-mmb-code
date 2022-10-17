@@ -9,9 +9,9 @@
   "initial_name": "initial_infected",
   "initial_value": 0.001,
   "Code_type": "Matlab",
-  "Dynare_version": "0"
+  "Dynare_version": "0",
   "model_type":2, 
-  "features":[
+  "features":{
 		"fiscal_policy": 1, 
 		"monetary_policy": 0, 
 		"financial": 0, 
@@ -19,7 +19,7 @@
 		"multi_country": 0, 
 		"heterogeneity": 0, 
 		"optimal_policy": 1 
-			], 
+  }, 
 
   "variables": [ 
 			"Labour",
