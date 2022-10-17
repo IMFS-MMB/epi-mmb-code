@@ -1,0 +1,32 @@
+{
+  "name": "BJ_22",
+  "author": "Brotherhood and Jerbashian",
+  "title": "Firm behavior during an epidemic",
+  "year": 2022,
+  "publication": "Under Review at Journal of Economic Dynamics and Control",
+  "variabledim": 1,
+  "initial_type": "Param",
+  "initial_name": "initial_infected",
+  "initial_value": 0.001,
+  "Code_type": "Matlab",
+  "Dynare_version": "0"
+  "model_type":2, 
+  "features":[
+		"fiscal_policy": 1, 
+		"monetary_policy": 0, 
+		"financial": 0, 
+		"firm_exit": 0, 
+		"multi_country": 0, 
+		"heterogeneity": 0, 
+		"optimal_policy": 1 
+			], 
+
+  "variables": [ 
+			"Labour",
+			"Output",
+			"Susceptibles",
+			"Infected",
+			"Recovered",
+			"Deaths"
+			]
+}
